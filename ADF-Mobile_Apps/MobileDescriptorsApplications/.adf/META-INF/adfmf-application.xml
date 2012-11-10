@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf"
+                   name="MobileDescriptorsApplications" id="com.company.MobileDescriptorsApplications"
+                   appControllerFolder="ApplicationController">
+  <adfmf:featureReference id="gr.dim.stas.feature1" showOnNavigationBar="false"/>
+  <adfmf:featureReference id="gr.dim.stas.feature2"/>
+  <adfmf:featureReference id="gr.dim.stas.feature3"/>
+  <adfmf:navigation>
+    <adfmf:springboard enabled="true"/>
+    <adfmf:navigationBar displayHideShowNavigationBarControl="true" enabled="true"/>
+  </adfmf:navigation>
+</adfmf:application>
