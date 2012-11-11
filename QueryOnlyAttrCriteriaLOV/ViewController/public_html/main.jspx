@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx"
+                         id="pt1">
+          <f:facet name="center">
+            <af:panelGroupLayout layout="vertical" id="pgl1">
+              <af:panelHeader text="Employees" id="ph1">
+                <af:query id="qryId1" headerText="Search" disclosed="true"
+                          value="#{bindings.EmployeesViewCriteriaQuery.queryDescriptor}"
+                          model="#{bindings.EmployeesViewCriteriaQuery.queryModel}"
+                          queryListener="#{bindings.EmployeesViewCriteriaQuery.processQuery}"
+                          queryOperationListener="#{bindings.EmployeesViewCriteriaQuery.processQueryOperation}"
+                          resultComponentId="::resId1"/>
+              </af:panelHeader>
+              <af:table value="#{bindings.EmployeesView1.collectionModel}"
+                        var="row" rows="#{bindings.EmployeesView1.rangeSize}"
+                        emptyText="#{bindings.EmployeesView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        fetchSize="#{bindings.EmployeesView1.rangeSize}"
+                        rowBandingInterval="0"
+                        selectedRowKeys="#{bindings.EmployeesView1.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.EmployeesView1.collectionModel.makeCurrent}"
+                        rowSelection="single" id="resId1">
+                <af:column sortProperty="EmployeeId" sortable="true"
+                           headerText="#{bindings.EmployeesView1.hints.EmployeeId.label}"
+                           id="resId1c1">
+                  <af:outputText value="#{row.EmployeeId}" id="ot3">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.EmployeesView1.hints.EmployeeId.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="FirstName" sortable="true"
+                           headerText="#{bindings.EmployeesView1.hints.FirstName.label}"
+                           id="resId1c2">
+                  <af:outputText value="#{row.FirstName}" id="ot8"/>
+                </af:column>
+                <af:column sortProperty="LastName" sortable="true"
+                           headerText="#{bindings.EmployeesView1.hints.LastName.label}"
+                           id="resId1c3">
+                  <af:outputText value="#{row.LastName}" id="ot2"/>
+                </af:column>
+                <af:column sortProperty="Email" sortable="true"
+                           headerText="#{bindings.EmployeesView1.hints.Email.label}"
+                           id="resId1c4">
+                  <af:outputText value="#{row.Email}" id="ot6"/>
+                </af:column>
+                <af:column sortProperty="PhoneNumber" sortable="true"
+                           headerText="#{bindings.EmployeesView1.hints.PhoneNumber.label}"
+                           id="resId1c5">
+                  <af:outputText value="#{row.PhoneNumber}" id="ot4"/>
+                </af:column>
+                <af:column sortProperty="HireDate" sortable="true"
+                           headerText="#{bindings.EmployeesView1.hints.HireDate.label}"
+                           id="resId1c6">
+                  <af:outputText value="#{row.HireDate}" id="ot10">
+                    <af:convertDateTime pattern="#{bindings.EmployeesView1.hints.HireDate.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="JobId" sortable="true"
+                           headerText="#{bindings.EmployeesView1.hints.JobId.label}"
+                           id="resId1c7">
+                  <af:outputText value="#{row.JobId}" id="ot9"/>
+                </af:column>
+                <af:column sortProperty="Salary" sortable="true"
+                           headerText="#{bindings.EmployeesView1.hints.Salary.label}"
+                           id="resId1c8">
+                  <af:outputText value="#{row.Salary}" id="ot1">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.EmployeesView1.hints.Salary.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="CommissionPct" sortable="true"
+                           headerText="#{bindings.EmployeesView1.hints.CommissionPct.label}"
+                           id="resId1c9">
+                  <af:outputText value="#{row.CommissionPct}" id="ot11">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.EmployeesView1.hints.CommissionPct.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="ManagerId" sortable="true"
+                           headerText="#{bindings.EmployeesView1.hints.ManagerId.label}"
+                           id="resId1c10">
+                  <af:outputText value="#{row.ManagerId}" id="ot5">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.EmployeesView1.hints.ManagerId.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="DepartmentId" sortable="true"
+                           headerText="#{bindings.EmployeesView1.hints.DepartmentId.label}"
+                           id="resId1c11">
+                  <af:outputText value="#{row.DepartmentId}" id="ot7">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.EmployeesView1.hints.DepartmentId.format}"/>
+                  </af:outputText>
+                </af:column>
+              </af:table>
+            </af:panelGroupLayout>
+          </f:facet>
+          <f:facet name="header"/>
+          <f:facet name="end"/>
+          <f:facet name="start"/>
+          <f:facet name="branding"/>
+          <f:facet name="copyright"/>
+          <f:facet name="status"/>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

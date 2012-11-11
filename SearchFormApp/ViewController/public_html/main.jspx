@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx"
+                         id="pt1">
+          <f:facet name="center">
+            <af:panelFormLayout id="pfl1">
+              <af:inputText value="#{bindings.EmployeeId.inputValue}"
+                            label="#{bindings.EmployeeId.hints.label}"
+                            columns="#{bindings.EmployeeId.hints.displayWidth}"
+                            maximumLength="#{bindings.EmployeeId.hints.precision}"
+                            shortDesc="#{bindings.EmployeeId.hints.tooltip}"
+                            id="it3"/>
+              <af:inputText value="#{bindings.FirstName.inputValue}"
+                            label="#{bindings.FirstName.hints.label}"
+                            columns="#{bindings.FirstName.hints.displayWidth}"
+                            maximumLength="#{bindings.FirstName.hints.precision}"
+                            shortDesc="#{bindings.FirstName.hints.tooltip}"
+                            id="it4"/>
+              <af:inputText value="#{bindings.LastName.inputValue}"
+                            label="#{bindings.LastName.hints.label}"
+                            columns="#{bindings.LastName.hints.displayWidth}"
+                            maximumLength="#{bindings.LastName.hints.precision}"
+                            shortDesc="#{bindings.LastName.hints.tooltip}"
+                            id="it7"/>
+              <af:inputText value="#{bindings.Email.inputValue}"
+                            label="#{bindings.Email.hints.label}"
+                            columns="#{bindings.Email.hints.displayWidth}"
+                            maximumLength="#{bindings.Email.hints.precision}"
+                            shortDesc="#{bindings.Email.hints.tooltip}"
+                            id="it5"/>
+              <af:inputText value="#{bindings.PhoneNumber.inputValue}"
+                            label="#{bindings.PhoneNumber.hints.label}"
+                            columns="#{bindings.PhoneNumber.hints.displayWidth}"
+                            maximumLength="#{bindings.PhoneNumber.hints.precision}"
+                            shortDesc="#{bindings.PhoneNumber.hints.tooltip}"
+                            id="it1"/>
+              <af:inputDate value="#{bindings.HireDate.inputValue}"
+                            label="#{bindings.HireDate.hints.label}"
+                            shortDesc="#{bindings.HireDate.hints.tooltip}"
+                            id="id1">
+                <af:convertDateTime pattern="#{bindings.HireDate.format}"/>
+              </af:inputDate>
+              <af:inputText value="#{bindings.JobId.inputValue}"
+                            label="#{bindings.JobId.hints.label}"
+                            columns="#{bindings.JobId.hints.displayWidth}"
+                            maximumLength="#{bindings.JobId.hints.precision}"
+                            shortDesc="#{bindings.JobId.hints.tooltip}"
+                            id="it10"/>
+              <af:inputText value="#{bindings.Salary.inputValue}"
+                            label="#{bindings.Salary.hints.label}"
+                            columns="#{bindings.Salary.hints.displayWidth}"
+                            maximumLength="#{bindings.Salary.hints.precision}"
+                            shortDesc="#{bindings.Salary.hints.tooltip}"
+                            id="it9"/>
+              <af:inputText value="#{bindings.CommissionPct.inputValue}"
+                            label="#{bindings.CommissionPct.hints.label}"
+                            columns="#{bindings.CommissionPct.hints.displayWidth}"
+                            maximumLength="#{bindings.CommissionPct.hints.precision}"
+                            shortDesc="#{bindings.CommissionPct.hints.tooltip}"
+                            id="it11"/>
+              <af:inputText value="#{bindings.ManagerId.inputValue}"
+                            label="#{bindings.ManagerId.hints.label}"
+                            columns="#{bindings.ManagerId.hints.displayWidth}"
+                            maximumLength="#{bindings.ManagerId.hints.precision}"
+                            shortDesc="#{bindings.ManagerId.hints.tooltip}"
+                            id="it6"/>
+              <af:inputText value="#{bindings.DepartmentId.inputValue}"
+                            label="#{bindings.DepartmentId.hints.label}"
+                            columns="#{bindings.DepartmentId.hints.displayWidth}"
+                            maximumLength="#{bindings.DepartmentId.hints.precision}"
+                            shortDesc="#{bindings.DepartmentId.hints.tooltip}"
+                            id="it8"/>
+              <af:inputText value="#{bindings.ToPay.inputValue}"
+                            label="#{bindings.ToPay.hints.label}"
+                            columns="#{bindings.ToPay.hints.displayWidth}"
+                            maximumLength="#{bindings.ToPay.hints.precision}"
+                            shortDesc="#{bindings.ToPay.hints.tooltip}"
+                            id="it2"/>
+              <f:facet name="footer">
+                <af:panelGroupLayout layout="vertical" id="pgl2">
+                  <af:outputText value="#{bindings.EmployeesView1Iterator.findMode ? '* Find Mode' : ''}"
+                                 id="ot1"/>
+                  <af:panelGroupLayout layout="horizontal" id="pgl1">
+                    <af:commandButton actionListener="#{bindings.Execute.execute}"
+                                      text="Execute Show Details Only."
+                                      disabled="#{!bindings.Execute.enabled}"
+                                      id="cb2" partialSubmit="true"/>
+                  </af:panelGroupLayout>
+                  <af:table value="#{bindings.DepartmentsView2.collectionModel}"
+                            var="row"
+                            rows="#{bindings.DepartmentsView2.rangeSize}"
+                            emptyText="#{bindings.DepartmentsView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            fetchSize="#{bindings.DepartmentsView2.rangeSize}"
+                            rowBandingInterval="0"
+                            selectedRowKeys="#{bindings.DepartmentsView2.collectionModel.selectedRow}"
+                            selectionListener="#{bindings.DepartmentsView2.collectionModel.makeCurrent}"
+                            rowSelection="single" id="t1"
+                            partialTriggers="::cb2 ::pfl1">
+                    <af:column sortProperty="DepartmentId" sortable="false"
+                               headerText="#{bindings.DepartmentsView2.hints.DepartmentId.label}"
+                               id="c2">
+                      <af:outputText value="#{row.DepartmentId}" id="ot4">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.DepartmentsView2.hints.DepartmentId.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="DepartmentName" sortable="false"
+                               headerText="#{bindings.DepartmentsView2.hints.DepartmentName.label}"
+                               id="c3">
+                      <af:outputText value="#{row.DepartmentName}" id="ot3"/>
+                    </af:column>
+                    <af:column sortProperty="ManagerId" sortable="false"
+                               headerText="#{bindings.DepartmentsView2.hints.ManagerId.label}"
+                               id="c4">
+                      <af:outputText value="#{row.ManagerId}" id="ot5">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.DepartmentsView2.hints.ManagerId.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="LocationId" sortable="false"
+                               headerText="#{bindings.DepartmentsView2.hints.LocationId.label}"
+                               id="c1">
+                      <af:outputText value="#{row.LocationId}" id="ot2">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.DepartmentsView2.hints.LocationId.format}"/>
+                      </af:outputText>
+                    </af:column>
+                  </af:table>
+                </af:panelGroupLayout>
+              </f:facet>
+            </af:panelFormLayout>
+          </f:facet>
+          <f:facet name="header"/>
+          <f:facet name="end"/>
+          <f:facet name="start"/>
+          <f:facet name="branding"/>
+          <f:facet name="copyright"/>
+          <f:facet name="status"/>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

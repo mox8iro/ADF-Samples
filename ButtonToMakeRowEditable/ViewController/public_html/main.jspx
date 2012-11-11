@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx"
+                         id="pt1">
+          <f:facet name="center">
+            <af:panelCollection id="pc1">
+              <f:facet name="menus"/>
+              <f:facet name="toolbar">
+                <af:toolbar id="t2">
+                  <af:commandToolbarButton actionListener="#{bindings.Commit.execute}"
+                                           text="Commit"
+                                           
+                                           id="ctb1" partialSubmit="false"/>
+                  <af:commandToolbarButton actionListener="#{bindings.Rollback.execute}"
+                                           text="Rollback"
+                                          
+                                           immediate="true" id="ctb2"
+                                           partialSubmit="false">
+                    <af:resetActionListener/>
+                  </af:commandToolbarButton>
+                  <af:commandToolbarButton actionListener="#{bindings.CreateInsert.execute}"
+                                           text="CreateInsert"
+                                          
+                                           id="ctb3" partialTriggers="t1"/>
+                </af:toolbar>
+              </f:facet>
+              <f:facet name="statusbar"/>
+              <af:table value="#{bindings.CountriesView1.collectionModel}"
+                        var="row" rows="#{bindings.CountriesView1.rangeSize}"
+                        emptyText="#{bindings.CountriesView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        fetchSize="#{bindings.CountriesView1.rangeSize}"
+                        rowBandingInterval="0"
+                        selectedRowKeys="#{bindings.CountriesView1.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.CountriesView1.collectionModel.makeCurrent}"
+                        rowSelection="single" id="t1"
+                        partialTriggers="cb1 ::ctb3">
+                <af:column sortProperty="CountryId" sortable="false"
+                           headerText="#{bindings.CountriesView1.hints.CountryId.label}"
+                           id="c2">
+                  <af:inputText value="#{row.bindings.CountryId.inputValue}"
+                                label="#{bindings.CountriesView1.hints.CountryId.label}"
+                                required="#{bindings.CountriesView1.hints.CountryId.mandatory}"
+                                columns="#{bindings.CountriesView1.hints.CountryId.displayWidth}"
+                                maximumLength="#{bindings.CountriesView1.hints.CountryId.precision}"
+                                shortDesc="#{bindings.CountriesView1.hints.CountryId.tooltip}"
+                                id="it2">
+                    <f:validator binding="#{row.bindings.CountryId.validator}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="CountryName" sortable="false"
+                           headerText="#{bindings.CountriesView1.hints.CountryName.label}"
+                           id="c3">
+                  <af:inputText value="#{row.bindings.CountryName.inputValue}"
+                                label="#{bindings.CountriesView1.hints.CountryName.label}"
+                                required="#{bindings.CountriesView1.hints.CountryName.mandatory}"
+                                columns="#{bindings.CountriesView1.hints.CountryName.displayWidth}"
+                                maximumLength="#{bindings.CountriesView1.hints.CountryName.precision}"
+                                shortDesc="#{bindings.CountriesView1.hints.CountryName.tooltip}"
+                                id="it1">
+                    <f:validator binding="#{row.bindings.CountryName.validator}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="RegionId" sortable="false"
+                           headerText="#{bindings.CountriesView1.hints.RegionId.label}"
+                           id="c4">
+                  <af:inputText value="#{row.bindings.RegionId.inputValue}"
+                                label="#{bindings.CountriesView1.hints.RegionId.label}"
+                                required="#{bindings.CountriesView1.hints.RegionId.mandatory}"
+                                columns="#{bindings.CountriesView1.hints.RegionId.displayWidth}"
+                                maximumLength="#{bindings.CountriesView1.hints.RegionId.precision}"
+                                shortDesc="#{bindings.CountriesView1.hints.RegionId.tooltip}"
+                                id="it3">
+                    <f:validator binding="#{row.bindings.RegionId.validator}"/>
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.CountriesView1.hints.RegionId.format}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column id="c5">
+                  <af:commandButton text="edit" id="cb1" partialSubmit="true">
+                    <af:setPropertyListener from="#{true}"
+                                            to="#{bindings.editable.inputValue}"
+                                            type="action"/>
+                  </af:commandButton>
+                </af:column>
+              </af:table>
+            </af:panelCollection>
+          </f:facet>
+          <f:facet name="header"/>
+          <f:facet name="end"/>
+          <f:facet name="start"/>
+          <f:facet name="branding"/>
+          <f:facet name="copyright"/>
+          <f:facet name="status"/>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

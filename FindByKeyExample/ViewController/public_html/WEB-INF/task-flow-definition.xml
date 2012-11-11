@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="windows-1253" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="task-flow-definition">
+    <default-activity id="__1">index</default-activity>
+    <view id="index">
+      <page>/index.jspx</page>
+    </view>
+    <view id="emps">
+      <page>/emps.jspx</page>
+    </view>
+    <view id="empDetails">
+      <page>/empDetails.jspx</page>
+    </view>
+    <method-call id="findByKeyOnEmployeeDetails">
+      <method>#{bindings.findByKeyOnEmployeeDetails.execute}</method>
+      <outcome id="__37">
+        <fixed-outcome>ok</fixed-outcome>
+      </outcome>
+    </method-call>
+    <method-call id="findByKeyOnEmployees">
+      <method>#{bindings.findByKeyOnEmployees.execute}</method>
+      <outcome id="__38">
+        <fixed-outcome>ok</fixed-outcome>
+      </outcome>
+    </method-call>
+    <control-flow-rule id="__2">
+      <from-activity-id id="__3">index</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome id="__6">empDetails</from-outcome>
+        <to-activity-id id="__4">empDetails</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__7">
+        <from-outcome id="__9">emps</from-outcome>
+        <to-activity-id id="__8">emps</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__16">
+      <from-activity-id id="__15">*</from-activity-id>
+      <control-flow-case id="__17">
+        <from-outcome id="__19">index</from-outcome>
+        <to-activity-id id="__18">index</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__39">
+      <from-activity-id id="__40">empDetails</from-activity-id>
+      <control-flow-case id="__41">
+        <from-outcome id="__43">goEmp</from-outcome>
+        <to-activity-id id="__42">findByKeyOnEmployees</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__44">
+      <from-activity-id id="__45">findByKeyOnEmployees</from-activity-id>
+      <control-flow-case id="__46">
+        <from-outcome id="__47">ok</from-outcome>
+        <to-activity-id id="__48">emps</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__49">
+      <from-activity-id id="__50">emps</from-activity-id>
+      <control-flow-case id="__52">
+        <from-outcome id="__53">goDetails</from-outcome>
+        <to-activity-id id="__51">findByKeyOnEmployeeDetails</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__54">
+      <from-activity-id id="__55">findByKeyOnEmployeeDetails</from-activity-id>
+      <control-flow-case id="__56">
+        <from-outcome id="__57">ok</from-outcome>
+        <to-activity-id id="__58">empDetails</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="x-MacGreek" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="JobHistory"
+  Version="11.1.2.60.17"
+  DBObjectType="table"
+  DBObjectName="JOB_HISTORY"
+  AliasName="JobHistory"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <Attribute
+    Name="EmployeeId"
+    IsNotNull="true"
+    Precision="6"
+    Scale="0"
+    ColumnName="EMPLOYEE_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="JOB_HISTORY"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="StartDate"
+    IsNotNull="true"
+    ColumnName="START_DATE"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="DATE"
+    TableName="JOB_HISTORY"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="EndDate"
+    IsNotNull="true"
+    ColumnName="END_DATE"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="DATE"
+    TableName="JOB_HISTORY"/>
+  <Attribute
+    Name="JobId"
+    IsNotNull="true"
+    Precision="10"
+    ColumnName="JOB_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JOB_HISTORY">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DepartmentId"
+    Precision="4"
+    Scale="0"
+    ColumnName="DEPARTMENT_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="JOB_HISTORY"/>
+  <AccessorAttribute
+    Name="Departments"
+    Association="gr.dim.stas.model.entities.assocs.JhistDeptFkAssoc"
+    AssociationEnd="gr.dim.stas.model.entities.assocs.JhistDeptFkAssoc.Departments"
+    AssociationOtherEnd="gr.dim.stas.model.entities.assocs.JhistDeptFkAssoc.JobHistory"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Employees"
+    Association="gr.dim.stas.model.entities.assocs.JhistEmpFkAssoc"
+    AssociationEnd="gr.dim.stas.model.entities.assocs.JhistEmpFkAssoc.Employees"
+    AssociationOtherEnd="gr.dim.stas.model.entities.assocs.JhistEmpFkAssoc.JobHistory"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Jobs"
+    Association="gr.dim.stas.model.entities.assocs.JhistJobFkAssoc"
+    AssociationEnd="gr.dim.stas.model.entities.assocs.JhistJobFkAssoc.Jobs"
+    AssociationOtherEnd="gr.dim.stas.model.entities.assocs.JhistJobFkAssoc.JobHistory"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="JhistDateInterval">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="JHIST_DATE_INTERVAL"/>
+      <Attr Name="_checkCondition" Value="END_DATE > START_DATE"/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="JhistEmpIdStDatePk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="JHIST_EMP_ID_ST_DATE_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gr.dim.stas.model.entities.JobHistory.EmployeeId"/>
+      <Item Value="gr.dim.stas.model.entities.JobHistory.StartDate"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="JhistEmployeeNn">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="JHIST_EMPLOYEE_NN"/>
+      <Attr Name="_checkCondition" Value="EMPLOYEE_ID IS NOT NULL"/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="JhistEndDateNn">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="JHIST_END_DATE_NN"/>
+      <Attr Name="_checkCondition" Value="END_DATE IS NOT NULL"/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="JhistJobNn">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="JHIST_JOB_NN"/>
+      <Attr Name="_checkCondition" Value="JOB_ID IS NOT NULL"/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="JhistStartDateNn">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="JHIST_START_DATE_NN"/>
+      <Attr Name="_checkCondition" Value="START_DATE IS NOT NULL"/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="JhistDeptFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="DEPT_ID_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="JHIST_DEPT_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gr.dim.stas.model.entities.JobHistory.DepartmentId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="JhistEmpFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="EMP_EMP_ID_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="JHIST_EMP_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gr.dim.stas.model.entities.JobHistory.EmployeeId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="JhistJobFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="JOB_ID_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="JHIST_JOB_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gr.dim.stas.model.entities.JobHistory.JobId"/>
+    </AttrArray>
+  </Key>
+</Entity>

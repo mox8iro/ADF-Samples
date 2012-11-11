@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.61.92" id="indexPageDef"
+                Package="gr.dim.stas.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CountriesView1" RangeSize="10"
+              DataControl="HRModuleDataControl" id="CountriesView1Iterator"/>
+  </executables>
+  <bindings>
+    <list ListOperMode="navigation" IterBinding="CountriesView1Iterator"
+          ListIter="CountriesView1Iterator" id="CountryName">
+      <AttrNames>
+        <Item Value="CountryName"/>
+      </AttrNames>
+    </list>
+  </bindings>
+</pageDefinition>

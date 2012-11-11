@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:form id="f1">
+        <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx"
+                         id="pt1">
+          <f:facet name="center">
+           
+              <af:panelGroupLayout id="pgl1" layout="horizontal">
+              <af:panelGroupLayout id="pgl2" valign="top" layout="vertical">
+                <af:outputText value="Same task flow" id="ot1"/>
+                <af:outputText value="Different task flow" id="outputText1"/>
+              </af:panelGroupLayout>
+              <af:panelGroupLayout id="pgl3" valign="top" layout="vertical">
+                <af:commandButton text="Search" id="commandButton1OneFlow"
+                                  action="searchInOneTaskFlow"/>
+                <af:commandButton text="Search" id="cb1TwoFlows"
+                                  action="resultsInDifferentTaskFlow"/>
+              </af:panelGroupLayout>
+            </af:panelGroupLayout>
+           
+          </f:facet>
+          <f:facet name="header"/>
+          <f:facet name="end"/>
+          <f:facet name="start"/>
+          <f:facet name="branding"/>
+          <f:facet name="copyright"/>
+          <f:facet name="status"/>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:form id="f1">
+        <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx"
+                         id="pt1">
+          <f:facet name="center">
+            <af:panelGroupLayout id="pgl1" layout="scroll">
+              <af:panelGroupLayout id="pgl2" layout="horizontal">
+                <af:commandButton text="Hide First Name" id="cb1"
+                                  action="goSecond">
+                  <af:setActionListener from="FirstName"
+                                        to="#{pageFlowScope.attrName}"/>
+                  <af:setActionListener from="false"
+                                        to="#{pageFlowScope.booleanValue}"/>
+                </af:commandButton>
+                <af:outputText value="Makes Attribute 'FirstName' Queryable to false." id="ot1"/>
+              </af:panelGroupLayout>
+              <af:panelGroupLayout id="pgl3" layout="horizontal">
+                <af:commandButton text="Hide Last Name" id="commandButton1"
+                                  action="goSecond">
+                  <af:setActionListener from="LastName"
+                                        to="#{pageFlowScope.attrName}"/>
+                  <af:setActionListener from="false"
+                                        to="#{pageFlowScope.booleanValue}"/>
+                </af:commandButton>
+                <af:outputText value="Makes Attribute 'LastName' Queryable to false." id="ot2"/>
+              </af:panelGroupLayout>
+              <af:panelGroupLayout id="panelGroupLayout1" layout="horizontal">
+                <af:commandButton text="Show First Name" id="commandButton2"
+                                  action="goSecond">
+                  <af:setActionListener from="FirstName"
+                                        to="#{pageFlowScope.attrName}"/>
+                  <af:setActionListener from="true"
+                                        to="#{pageFlowScope.booleanValue}"/>
+                </af:commandButton>
+                <af:outputText value="Makes Attribute 'FirstName' Queryable to true."
+                               id="outputText1"/>
+              </af:panelGroupLayout>
+              <af:panelGroupLayout id="panelGroupLayout2" layout="horizontal">
+                <af:commandButton text="Show Last Name" id="commandButton3"
+                                  action="goSecond">
+                  <af:setActionListener from="LastName"
+                                        to="#{pageFlowScope.attrName}"/>
+                  <af:setActionListener from="true"
+                                        to="#{pageFlowScope.booleanValue}"/>
+                </af:commandButton>
+                <af:outputText value="Makes Attribute 'LastName' Queryable to true."
+                               id="outputText2"/>
+              </af:panelGroupLayout>
+            </af:panelGroupLayout>
+          </f:facet>
+          <f:facet name="header"/>
+          <f:facet name="end"/>
+          <f:facet name="start"/>
+          <f:facet name="branding"/>
+          <f:facet name="copyright"/>
+          <f:facet name="status"/>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

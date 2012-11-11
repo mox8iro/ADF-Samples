@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.55.36" id="DataBindings" SeparateXMLFiles="false"
+             Package="gr.stas.dim.view" ClientType="Generic">
+  <pageMap>
+    <page path="/main.jspx" usageId="gr_stas_dim_view_mainPageDef"/>
+    <page path="/Dept.jspx" usageId="gr_stas_dim_view_DeptPageDef"/>
+    <page path="PageFlow#createRowDept"
+          usageId="gr_stas_dim_view_adfc_config__methodCall1PageDef"/>
+    <page path="PageFlow#createAndInitRowDept"
+          usageId="gr_stas_dim_view_adfc_config__createAndInitRowDeptPageDef"/>
+    <page path="/EmpCreate.jspx" usageId="gr_stas_dim_view_EmpCreatePageDef"/>
+    <page path="PageFlow#createRowSetAttrEmp"
+          usageId="gr_stas_dim_view_adfc_config__createRowSetAttrEmpPageDef"/>
+    <page path="PageFlow#createRowSetAttrValuesEmp"
+          usageId="gr_stas_dim_view_adfc_config__methodCall2PageDef"/>
+    <page path="PageFlow#createAndInitRowEmp"
+          usageId="gr_stas_dim_view_adfc_config__methodCall3PageDef"/>
+    <page path="PageFlow#createRowSetAttributeValuesDept"
+          usageId="gr_stas_dim_view_adfc_config__createRowSetAttributeValuesDeptPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="gr_stas_dim_view_mainPageDef"
+          path="gr.stas.dim.view.pageDefs.mainPageDef"/>
+    <page id="gr_stas_dim_view_adfc_config__methodCall1PageDef"
+          path="gr.stas.dim.view.pageDefs.adfc_config__methodCall1PageDef"/>
+    <page id="gr_stas_dim_view_DeptPageDef"
+          path="gr.stas.dim.view.pageDefs.DeptPageDef"/>
+    <page id="gr_stas_dim_view_adfc_config__createAndInitRowDeptPageDef"
+          path="gr.stas.dim.view.pageDefs.adfc_config__createAndInitRowDeptPageDef"/>
+    <page id="gr_stas_dim_view_EmpCreatePageDef"
+          path="gr.stas.dim.view.pageDefs.EmpCreatePageDef"/>
+    <page id="gr_stas_dim_view_adfc_config__methodCall3PageDef"
+          path="gr.stas.dim.view.pageDefs.adfc_config__methodCall3PageDef"/>
+    <page id="gr_stas_dim_view_adfc_config__methodCall2PageDef"
+          path="gr.stas.dim.view.pageDefs.adfc_config__methodCall2PageDef"/>
+    <page id="gr_stas_dim_view_adfc_config__createRowSetAttrEmpPageDef"
+          path="gr.stas.dim.view.pageDefs.adfc_config__createRowSetAttrEmpPageDef"/>
+    <page id="gr_stas_dim_view_adfc_config__createRowSetAttributeValuesDeptPageDef"
+          path="gr.stas.dim.view.pageDefs.adfc_config__createRowSetAttributeValuesDeptPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="gr.stas.dim.model.views"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

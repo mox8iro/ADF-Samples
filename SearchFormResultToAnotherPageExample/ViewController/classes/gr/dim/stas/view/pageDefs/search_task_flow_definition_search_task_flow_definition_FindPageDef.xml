@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.61.92"
+                id="search_task_flow_definition_search_task_flow_definition_FindPageDef"
+                Package="gr.dim.stas.view.pageDefs" SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="EmployeesView1" RangeSize="25"
+              DataControl="HrModuleDataControl" id="EmployeesView1Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="EmployeesView1Iterator" id="Find"
+            RequiresUpdateModel="true" Action="iteratorFind"/>
+  </bindings>
+</pageDefinition>

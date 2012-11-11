@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="index" id="d1">
+            <af:form id="f1">
+                <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx" id="pt1">
+                    <f:facet name="center">
+                        <af:panelGroupLayout id="showPopUp">
+                            <af:commandButton text="commandButton 1" id="cb1">
+                                <af:showPopupBehavior popupId="p1" triggerType="action"/>
+                            </af:commandButton>
+                        </af:panelGroupLayout>
+                    </f:facet>
+                    <f:facet name="header"/>
+                    <f:facet name="end">
+                        <af:popup childCreation="deferred" autoCancel="disabled" id="p1"
+                                  popupCanceledListener="#{BBean.popupCanceledListener}">
+                            <af:dialog id="d2" dialogListener="#{BBean.dialogListenerSaample}">
+                                <f:facet name="buttonBar"/>
+                            </af:dialog>
+                        </af:popup>
+                    </f:facet>
+                    <f:facet name="start"/>
+                    <f:facet name="branding"/>
+                    <f:facet name="copyright"/>
+                    <f:facet name="status"/>
+                </af:pageTemplate>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="task-flow-definition">
+    <default-activity id="__1">index</default-activity>
+    <managed-bean id="__5">
+      <managed-bean-name id="__2">IndexManagedBean</managed-bean-name>
+      <managed-bean-class id="__4">gr.dim.stas.managedbeans.IndexManagedBean</managed-bean-class>
+      <managed-bean-scope id="__3">request</managed-bean-scope>
+    </managed-bean>
+    <view id="index">
+      <page>/index.jspx</page>
+    </view>
+  </task-flow-definition>
+</adfc-config>

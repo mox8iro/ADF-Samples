@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx"
+                         id="pt1">
+          <f:facet name="center">
+            <af:panelFormLayout id="pfl1">
+              <af:inputText value="#{bindings.DepartmentId.inputValue}"
+                            label="#{bindings.DepartmentId.hints.label}"
+                            required="#{bindings.DepartmentId.hints.mandatory}"
+                            columns="#{bindings.DepartmentId.hints.displayWidth}"
+                            maximumLength="#{bindings.DepartmentId.hints.precision}"
+                            shortDesc="#{bindings.DepartmentId.hints.tooltip}"
+                            id="it2">
+                <f:validator binding="#{bindings.DepartmentId.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.DepartmentId.format}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.DepartmentName.inputValue}"
+                            label="#{bindings.DepartmentName.hints.label}"
+                            required="#{bindings.DepartmentName.hints.mandatory}"
+                            columns="#{bindings.DepartmentName.hints.displayWidth}"
+                            maximumLength="#{bindings.DepartmentName.hints.precision}"
+                            shortDesc="#{bindings.DepartmentName.hints.tooltip}"
+                            id="it1">
+                <f:validator binding="#{bindings.DepartmentName.validator}"/>
+              </af:inputText>
+              <af:selectOneChoice value="#{bindings.ManagerId.inputValue}"
+                                  label="#{bindings.ManagerId.label}"
+                                  required="#{bindings.ManagerId.hints.mandatory}"
+                                  shortDesc="#{bindings.ManagerId.hints.tooltip}"
+                                  id="soc1" autoSubmit="true">
+                <f:selectItems value="#{bindings.ManagerId.items}" id="si1"/>
+              </af:selectOneChoice>
+              <af:inputText value="#{bindings.LastName.inputValue}"
+                            label="#{bindings.LastName.hints.label}"
+                            required="#{bindings.LastName.hints.mandatory}"
+                            columns="#{bindings.LastName.hints.displayWidth}"
+                            maximumLength="#{bindings.LastName.hints.precision}"
+                            shortDesc="#{bindings.LastName.hints.tooltip}"
+                            id="it3" partialTriggers="soc1" disabled="true">
+                <f:validator binding="#{bindings.LastName.validator}"/>
+              </af:inputText>
+              <af:outputText value="#{bindings.JobTitle.inputValue}" id="ot1"
+                             partialTriggers="soc1"/>
+              <f:facet name="footer">
+                <af:panelGroupLayout id="pgl1">
+                  <af:group id="g1">
+                    <af:commandButton text="Submit" id="cb1"/>
+                    <af:commandButton actionListener="#{bindings.Commit.execute}"
+                                      text="Commit"
+                                      disabled="#{!bindings.Commit.enabled}"
+                                      id="cb2"/>
+                    <af:commandButton actionListener="#{bindings.Rollback.execute}"
+                                      text="Rollback"
+                                      disabled="#{!bindings.Rollback.enabled}"
+                                      immediate="true" id="cb3">
+                      <af:resetActionListener/>
+                    </af:commandButton>
+                    <af:commandButton text="Back to Employees Search" id="cb4"
+                                      action="goBack"/>
+                  </af:group>
+                </af:panelGroupLayout>
+              </f:facet>
+            </af:panelFormLayout>
+          </f:facet>
+          <f:facet name="header"/>
+          <f:facet name="end"/>
+          <f:facet name="start"/>
+          <f:facet name="branding"/>
+          <f:facet name="copyright"/>
+          <f:facet name="status"/>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

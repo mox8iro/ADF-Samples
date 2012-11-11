@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.59.23" id="indexPageDef"
+                Package="gr.dim.stas.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SampletableforcondView1" RangeSize="25"
+              DataControl="HRModuleDataControl"
+              id="SampletableforcondView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SampletableforcondView1Iterator"
+          id="SampletableforcondView1">
+      <nodeDefinition DefName="gr.dim.stas.model.views.SampletableforcondView"
+                      DiscrName="IsVisible" DiscrValue="true"
+                      Name="SampletableforcondView10">
+        <AttrNames>
+          <Item Value="Rowname"/>
+          <Item Value="Id"/>
+          <Item Value="Selectradio"/>
+          <Item Value="Comments"/>
+          <Item Value="Typeofdata"/>
+          <Item Value="ReqRadio"/>
+          <Item Value="IsVisible"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction"
+            DataControl="HRModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false"
+            Action="rollbackTransaction" DataControl="HRModuleDataControl"/>
+    <methodAction id="updateOtherRows"
+                  InstanceName="HRModuleDataControl.dataProvider"
+                  DataControl="HRModuleDataControl" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="updateOtherRows"
+                  IsViewObjectMethod="false"
+                  ReturnName="data.HRModuleDataControl.methodResults.updateOtherRows_HRModuleDataControl_dataProvider_updateOtherRows_result">
+      <NamedData NDName="value" NDValue="#{pageFlowScope.reqValue}"
+                 NDType="java.lang.String"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

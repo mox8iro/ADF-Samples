@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-call id="mainTaskFlowCall">
+    <task-flow-reference>
+      <document>/WEB-INF/mainTaskFlowCall.xml</document>
+      <id>mainTaskFlowCall</id>
+    </task-flow-reference>
+  </task-flow-call>
+  <view id="index">
+    <page>/index.jspx</page>
+  </view>
+  <control-flow-rule id="__1">
+    <from-activity-id id="__2">index</from-activity-id>
+    <control-flow-case id="__4">
+      <from-outcome id="__5">insertEmployees</from-outcome>
+      <to-activity-id id="__3">mainTaskFlowCall</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+</adfc-config>

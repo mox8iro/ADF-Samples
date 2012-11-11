@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx"
+                         id="pt1">
+          <f:facet name="center">
+            <af:panelCollection id="pc1" styleClass="AFStretchWidth">
+              <f:facet name="menus"/>
+              <f:facet name="toolbar">
+                <af:toolbar id="t2">
+                  <af:commandToolbarButton actionListener="#{bindings.Commit.execute}"
+                                           text="Commit"
+                                           id="ctb1"/>
+                  <af:commandToolbarButton actionListener="#{bindings.Rollback.execute}"
+                                           text="Rollback"
+                                           immediate="true" id="ctb2">
+                    <af:resetActionListener/>
+                  </af:commandToolbarButton>
+                </af:toolbar>
+              </f:facet>
+              <f:facet name="statusbar"/>
+              <af:table value="#{bindings.SampletableforcondView1.collectionModel}"
+                        var="row"
+                        rows="#{bindings.SampletableforcondView1.rangeSize}"
+                        emptyText="#{bindings.SampletableforcondView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        fetchSize="#{bindings.SampletableforcondView1.rangeSize}"
+                        rowBandingInterval="0"
+                        selectedRowKeys="#{bindings.SampletableforcondView1.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.SampletableforcondView1.collectionModel.makeCurrent}"
+                        rowSelection="single" id="t1" immediate="true"
+                        binding="#{IndexManagedBean.theTable}">
+                <af:column sortProperty="Rowname" sortable="false"
+                           headerText="#{bindings.SampletableforcondView1.hints.Rowname.label}"
+                           id="c5">
+                  <af:inputText value="#{row.bindings.Rowname.inputValue}"
+                                label="#{bindings.SampletableforcondView1.hints.Rowname.label}"
+                                required="#{bindings.SampletableforcondView1.hints.Rowname.mandatory}"
+                                columns="#{bindings.SampletableforcondView1.hints.Rowname.displayWidth}"
+                                maximumLength="#{bindings.SampletableforcondView1.hints.Rowname.precision}"
+                                shortDesc="#{bindings.SampletableforcondView1.hints.Rowname.tooltip}"
+                                id="it5">
+                    <f:validator binding="#{row.bindings.Rowname.validator}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="Id" sortable="false"
+                           headerText="#{bindings.SampletableforcondView1.hints.Id.label}"
+                           id="c3">
+                  <af:inputText value="#{row.bindings.Id.inputValue}"
+                                label="#{bindings.SampletableforcondView1.hints.Id.label}"
+                                required="#{bindings.SampletableforcondView1.hints.Id.mandatory}"
+                                columns="#{bindings.SampletableforcondView1.hints.Id.displayWidth}"
+                                maximumLength="#{bindings.SampletableforcondView1.hints.Id.precision}"
+                                shortDesc="#{bindings.SampletableforcondView1.hints.Id.tooltip}"
+                                id="it3">
+                    <f:validator binding="#{row.bindings.Id.validator}"/>
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.SampletableforcondView1.hints.Id.format}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="Selectradio" sortable="false"
+                           headerText="#{bindings.SampletableforcondView1.hints.Selectradio.label}"
+                           id="c2">
+                  <af:selectOneRadio value="#{row.bindings.Selectradio.inputValue}"
+                                     label="#{row.bindings.Selectradio.label}"
+                                     required="#{row.bindings.ReqRadio.inputValue=='true'}"
+                                     shortDesc="#{bindings.SampletableforcondView1.hints.Selectradio.tooltip}"
+                                     id="sor1" autoSubmit="true"
+                                     valueChangeListener="#{IndexManagedBean.radioVCL}">
+                    <f:selectItems value="#{row.bindings.Selectradio.items}"
+                                   id="si1"/>
+                  </af:selectOneRadio>
+                </af:column>
+                <af:column sortProperty="Comments" sortable="false"
+                           headerText="#{bindings.SampletableforcondView1.hints.Comments.label}"
+                           id="c6">
+                  <af:inputText value="#{row.bindings.Comments.inputValue}"
+                                label="#{bindings.SampletableforcondView1.hints.Comments.label}"
+                                required="#{bindings.SampletableforcondView1.hints.Comments.mandatory}"
+                                columns="#{bindings.SampletableforcondView1.hints.Comments.displayWidth}"
+                                maximumLength="#{bindings.SampletableforcondView1.hints.Comments.precision}"
+                                shortDesc="#{bindings.SampletableforcondView1.hints.Comments.tooltip}"
+                                id="it1">
+                    <f:validator binding="#{row.bindings.Comments.validator}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="Typeofdata" sortable="false"
+                           headerText="#{bindings.SampletableforcondView1.hints.Typeofdata.label}"
+                           id="c4">
+                  <af:inputText value="#{row.bindings.Typeofdata.inputValue}"
+                                label="#{bindings.SampletableforcondView1.hints.Typeofdata.label}"
+                                required="#{bindings.SampletableforcondView1.hints.Typeofdata.mandatory}"
+                                columns="#{bindings.SampletableforcondView1.hints.Typeofdata.displayWidth}"
+                                maximumLength="#{bindings.SampletableforcondView1.hints.Typeofdata.precision}"
+                                shortDesc="#{bindings.SampletableforcondView1.hints.Typeofdata.tooltip}"
+                                id="it4">
+                    <f:validator binding="#{row.bindings.Typeofdata.validator}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column sortProperty="ReqRadio" sortable="false"
+                           headerText="#{bindings.SampletableforcondView1.hints.ReqRadio.label}"
+                           id="c1">
+                  <af:inputText value="#{row.bindings.ReqRadio.inputValue}"
+                                label="#{bindings.SampletableforcondView1.hints.ReqRadio.label}"
+                                required="#{bindings.SampletableforcondView1.hints.ReqRadio.mandatory}"
+                                columns="#{bindings.SampletableforcondView1.hints.ReqRadio.displayWidth}"
+                                maximumLength="#{bindings.SampletableforcondView1.hints.ReqRadio.precision}"
+                                shortDesc="#{bindings.SampletableforcondView1.hints.ReqRadio.tooltip}"
+                                id="it2">
+                    <f:validator binding="#{row.bindings.ReqRadio.validator}"/>
+                  </af:inputText>
+                </af:column>
+              </af:table>
+            </af:panelCollection>
+          </f:facet>
+          <f:facet name="header"/>
+          <f:facet name="end"/>
+          <f:facet name="start"/>
+          <f:facet name="branding"/>
+          <f:facet name="copyright"/>
+          <f:facet name="status">
+            <af:popup id="p1" binding="#{IndexManagedBean.thePopup}">
+              <af:dialog id="d2" 
+                         title="Infomrational Message on Required Values.">
+                <af:outputFormatted value="#{pageFlowScope.errorMessage}"
+                                    id="of1"/>
+              </af:dialog>
+            </af:popup>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.59.23"
+                id="task_flow_definition_task_flow_definition_findByKeyOnEmployeesPageDef"
+                Package="gr.dim.stas.view.pageDefs" SkipValidation="true">
+  <parameters/>
+  <executables/>
+  <bindings>
+    <action id="findByKeyOnEmployees" RequiresUpdateModel="true"
+            Action="invokeMethod" MethodName="findByKeyOnEmployees"
+            IsViewObjectMethod="false" DataControl="AppModuleDataControl"
+            InstanceName="AppModuleDataControl.dataProvider"/>
+  </bindings>
+</pageDefinition>

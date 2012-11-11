@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="task-flow-definition">
+    <default-activity id="__1">Master</default-activity>
+    <view id="Master">
+      <page>/Master.jspx</page>
+    </view>
+    <task-flow-call id="Details">
+      <task-flow-reference>
+        <document>/WEB-INF/task-flow-definition1.xml</document>
+        <id>task-flow-definition1</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__2">
+      <from-activity-id id="__3">Master</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome id="__6">showDetails</from-outcome>
+        <to-activity-id id="__4">Details</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

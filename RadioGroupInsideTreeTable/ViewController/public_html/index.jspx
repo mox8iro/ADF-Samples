@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx"
+                         id="pt1">
+          <f:facet name="center">
+            <af:panelCollection id="pc1" styleClass="AFStretchWidth">
+              <f:facet name="menus"/>
+              <f:facet name="toolbar"/>
+              <f:facet name="statusbar"/>
+              <af:treeTable value="#{bindings.DepartmentsView1.treeModel}"
+                            var="node"
+                            selectionListener="#{bindings.DepartmentsView1.treeModel.makeCurrent}"
+                            rowSelection="single" id="tt1">
+                <f:facet name="nodeStamp">
+                  <af:column id="c1">
+                    <af:outputText value="#{node.DepartmentName}" id="ot2"/>
+                  </af:column>
+                </f:facet>
+                <f:facet name="pathStamp">
+                  <af:outputText value="#{node}" id="ot1"/>
+                </f:facet>
+                <af:column id="c2">
+                  <af:outputText value="#{node.FirstName}" id="otd2"/>
+                </af:column>
+                <af:column id="column1">
+                <af:outputText value="#{node.LastName}" id="otdd2"/>
+                </af:column>
+                <af:column id="radioC">
+                <af:selectOneRadio value="#{node.CheckOption}"
+                                   label="#{node.bindings.CheckOption.label}"
+                                   required="#{node.bindings.CheckOption.hints.mandatory}"
+                                   id="sor1" valuePassThru="true">
+                
+                    <f:selectItems value="#{node.bindings.CheckOption.items}"
+                                   id="si1"/>
+                  </af:selectOneRadio>
+                </af:column>
+              </af:treeTable>
+            </af:panelCollection>
+          </f:facet>
+          <f:facet name="header"/>
+          <f:facet name="end"/>
+          <f:facet name="start"/>
+          <f:facet name="branding"/>
+          <f:facet name="copyright"/>
+          <f:facet name="status"/>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

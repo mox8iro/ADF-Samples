@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="main">
+    <page>/main.jspx</page>
+  </view>
+  <view id="second">
+    <page>/second.jspx</page>
+  </view>
+  <control-flow-rule>
+    <from-activity-id>main</from-activity-id>
+    <control-flow-case>
+      <from-outcome>goSecond</from-outcome>
+      <to-activity-id>second</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule>
+    <from-activity-id>second</from-activity-id>
+    <control-flow-case>
+      <from-outcome>goBack</from-outcome>
+      <to-activity-id>main</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <managed-bean>
+    <managed-bean-name>main_Backing</managed-bean-name>
+    <managed-bean-class>gr.dim.stas.view.backing.main_Backing</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

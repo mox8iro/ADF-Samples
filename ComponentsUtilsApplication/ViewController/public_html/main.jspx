@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{main_Backing.myBeforePhaseListener}">
+    <af:document>
+      <af:form>
+        <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx">
+          <f:facet name="center">
+            <af:panelGroupLayout>
+              <af:inputText label="Text 1" binding="#{main_Backing.textOne}"/>
+            </af:panelGroupLayout>
+          </f:facet>
+          <f:facet name="header"/>
+          <f:facet name="end"/>
+          <f:facet name="start">
+            <af:panelGroupLayout layout="vertical">
+              <af:commandButton text="action Listener Button"
+                                id="actionListenerButton"
+                                binding="#{main_Backing.myActionListenerButton}"/>
+              <af:commandButton text="fileDownLoadListener" id="fileDownLoadButton"
+                                binding="#{main_Backing.myFileDownLoadListenerButton}"/>
+              <af:commandButton text="Action" id="actionButton"
+                                binding="#{main_Backing.myActionButton}"/>
+              <af:commandButton text="resetActionListener"
+                                id="resetActionButton"
+                                binding="#{main_Backing.myResetActionListenerButton}"/>
+            </af:panelGroupLayout>
+          </f:facet>
+          <f:facet name="branding"/>
+          <f:facet name="copyright"/>
+          <f:facet name="status"/>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

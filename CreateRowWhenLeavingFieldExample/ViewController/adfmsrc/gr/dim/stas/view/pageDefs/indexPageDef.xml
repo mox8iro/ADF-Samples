@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.60.17" id="indexPageDef"
+                Package="gr.dim.stas.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="RegionsView1" RangeSize="25" DataControl="AppModuleDataControl" id="RegionsView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="RegionsView1Iterator" id="RegionsView1">
+      <nodeDefinition DefName="gr.dim.stas.model.views.RegionsView" Name="RegionsView10">
+        <AttrNames>
+          <Item Value="RegionId"/>
+          <Item Value="RegionName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="RegionsView1Iterator" id="CreateInsert" InstanceName="AppModuleDataControl.RegionsView1"
+            DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

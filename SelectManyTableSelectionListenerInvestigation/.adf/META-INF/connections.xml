@@ -1,0 +1,665 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+   <Reference name="SGws" className="oracle.adf.model.connection.webservice.impl.WebServiceConnectionImpl" xmlns="">
+      <Factory className="oracle.adf.model.connection.webservice.api.WebServiceConnectionFactory"/>
+      <RefAddresses>
+         <XmlRefAddr addrType="WebServiceConnection">
+            <Contents>
+               <wsconnection description="http://dimitrioss-imac.local:8088/mockReferenceDataReqABCSImplBinding?WSDL" service="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}ReferenceDataReqABCSImpl_ep">
+                  <model name="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}ReferenceDataReqABCSImpl" xmlns="http://oracle.com/ws/model">
+                     <types xmlns="http://oracle.com/oracle/webservices/mdds">
+                        <complexType elementQualified="true" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="ValueExpression" prefix="" xmlns="">
+                           <att name="criteriaAttribute" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" required="true">
+                              <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                           </att>
+                           <att name="operationCode" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" required="true">
+                              <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="UnaryOperationCode"/>
+                           </att>
+                           <sequence minOccurs="1" maxOccurs="1">
+                              <part name="Value" required="true" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" elementQualified="true">
+                                 <array dimensions="1" type="2">
+                                    <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                 </array>
+                              </part>
+                           </sequence>
+                        </complexType>
+                        <enumeration namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="UnaryOperationCode" xsdType="string" xmlns="">
+                           <value value="EQUALS"/>
+                           <value value="NOT_EQUALS"/>
+                           <value value="GREATER_THAN"/>
+                           <value value="GREATER_THAN_EQUALS"/>
+                           <value value="LESS_THAN"/>
+                           <value value="LESS_THAN_EQUALS"/>
+                           <value value="CONTAINS"/>
+                           <value value="DOES_NOT_CONTAIN"/>
+                           <value value="LIKE"/>
+                           <value value="NOT_LIKE"/>
+                           <value value="LIKE_IGNORE_CASE"/>
+                           <value value="NOT_LIKE_IGNORE_CASE"/>
+                           <value value="IS_BLANK"/>
+                           <value value="IS_NOT_BLANK"/>
+                        </enumeration>
+                        <complexType elementQualified="true" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="CriteriaExpression" prefix="" xmlns="">
+                           <att name="criteriaLogicOperation" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" required="true">
+                              <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="LogicalOperationCode"/>
+                           </att>
+                           <sequence minOccurs="1" maxOccurs="1">
+                              <choice minOccurs="1" maxOccurs="1">
+                                 <part name="ValueExpression" required="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" refElement="true" refElementQName="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}ValueExpression" elementQualified="true">
+                                    <array dimensions="1" type="2">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="ValueExpression" prefix=""/>
+                                    </array>
+                                 </part>
+                                 <part name="CriteriaExpression" required="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" refElement="true" refElementQName="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}CriteriaExpression" elementQualified="true">
+                                    <array dimensions="1" type="2">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="CriteriaExpression" prefix=""/>
+                                    </array>
+                                 </part>
+                              </choice>
+                           </sequence>
+                        </complexType>
+                        <complexType elementQualified="true" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequestType" prefix="" xmlns="">
+                           <sequence minOccurs="1" maxOccurs="1">
+                              <part name="Criteria" required="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" refElement="true" refElementQName="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}Criteria" elementQualified="true">
+                                 <array dimensions="1" type="2">
+                                    <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="Criteria" prefix=""/>
+                                 </array>
+                              </part>
+                              <part name="Pagination" required="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" refElement="true" refElementQName="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}Pagination" elementQualified="true">
+                                 <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="Pagination" prefix=""/>
+                              </part>
+                           </sequence>
+                        </complexType>
+                        <complexType elementQualified="true" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="Criteria" prefix="" xmlns="">
+                           <sequence minOccurs="1" maxOccurs="1">
+                              <part name="CriteriaExpression" required="true" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" refElement="true" refElementQName="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}CriteriaExpression" elementQualified="true">
+                                 <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="CriteriaExpression" prefix=""/>
+                              </part>
+                           </sequence>
+                        </complexType>
+                        <enumeration namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="LogicalOperationCode" xsdType="string" xmlns="">
+                           <value value="AND"/>
+                           <value value="OR"/>
+                        </enumeration>
+                        <complexType elementQualified="true" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponseType" prefix="" xmlns="">
+                           <att name="objectType" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" required="true">
+                              <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                           </att>
+                           <att name="totalRowsCount" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" required="false">
+                              <type namespace="http://www.w3.org/2001/XMLSchema" localPart="integer"/>
+                           </att>
+                           <att name="payloadRowsCount" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" required="false">
+                              <type namespace="http://www.w3.org/2001/XMLSchema" localPart="integer"/>
+                           </att>
+                           <att name="sequenceNumber" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" required="false">
+                              <type namespace="http://www.w3.org/2001/XMLSchema" localPart="integer"/>
+                           </att>
+                           <sequence minOccurs="1" maxOccurs="1">
+                              <part name="KeyValue" required="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" refElement="true" refElementQName="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}KeyValue" elementQualified="true">
+                                 <array dimensions="1" type="2">
+                                    <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValue" prefix=""/>
+                                 </array>
+                              </part>
+                           </sequence>
+                        </complexType>
+                        <types-in-elements>
+                           <complexType elementQualified="true" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="ValueExpression" prefix="" xmlns="">
+                              <att name="criteriaAttribute" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" required="true">
+                                 <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                              </att>
+                              <att name="operationCode" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" required="true">
+                                 <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="UnaryOperationCode"/>
+                              </att>
+                              <sequence minOccurs="1" maxOccurs="1">
+                                 <part name="Value" required="true" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" elementQualified="true">
+                                    <array dimensions="1" type="2">
+                                       <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                    </array>
+                                 </part>
+                              </sequence>
+                           </complexType>
+                           <complexType elementQualified="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="Pagination" prefix="" xmlns="">
+                              <att name="startPosition" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" required="true">
+                                 <type namespace="http://www.w3.org/2001/XMLSchema" localPart="integer"/>
+                              </att>
+                              <att name="fetchSize" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" required="true">
+                                 <type namespace="http://www.w3.org/2001/XMLSchema" localPart="integer"/>
+                              </att>
+                           </complexType>
+                           <complexType elementQualified="true" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="CriteriaExpression" prefix="" xmlns="">
+                              <att name="criteriaLogicOperation" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" required="true">
+                                 <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="LogicalOperationCode"/>
+                              </att>
+                              <sequence minOccurs="1" maxOccurs="1">
+                                 <choice minOccurs="1" maxOccurs="1">
+                                    <part name="ValueExpression" required="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" refElement="true" refElementQName="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}ValueExpression" elementQualified="true">
+                                       <array dimensions="1" type="2">
+                                          <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="ValueExpression" prefix=""/>
+                                       </array>
+                                    </part>
+                                    <part name="CriteriaExpression" required="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" refElement="true" refElementQName="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}CriteriaExpression" elementQualified="true">
+                                       <array dimensions="1" type="2">
+                                          <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="CriteriaExpression" prefix=""/>
+                                       </array>
+                                    </part>
+                                 </choice>
+                              </sequence>
+                           </complexType>
+                           <complexType elementQualified="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValue" prefix="" xmlns="">
+                              <att name="id" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" required="true">
+                                 <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                              </att>
+                              <att name="label" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" required="true">
+                                 <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                              </att>
+                           </complexType>
+                           <complexType elementQualified="true" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="Criteria" prefix="" xmlns="">
+                              <sequence minOccurs="1" maxOccurs="1">
+                                 <part name="CriteriaExpression" required="true" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" refElement="true" refElementQName="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}CriteriaExpression" elementQualified="true">
+                                    <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="CriteriaExpression" prefix=""/>
+                                 </part>
+                              </sequence>
+                           </complexType>
+                        </types-in-elements>
+                     </types>
+                     <service name="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}ReferenceDataReqABCSImpl_ep">
+                        <port name="ReferenceDataReqABCSImpl_pt" binding="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}ReferenceDataReqABCSImplBinding" portType="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}ReferenceDataReqABCSImpl">
+                           <soap addressUrl="http://Dimitrioss-iMac.local:8088/mockReferenceDataReqABCSImplBinding" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                           <operation name="QueryDirectiveClassList">
+                              <soap soapAction="QueryDirectiveClassList" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <fault name="fault" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryFault">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://schemas.xmlsoap.org/soap/envelope/" localPart="Fault" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="fault" required="false" xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <part name="faultcode" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="faultstring" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="detail" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type>
+                                                   <complexType elementQualified="true">
+                                                      <part name="part" required="true" elementQualified="false">
+                                                         <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                                      </part>
+                                                   </complexType>
+                                                </type>
+                                             </part>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </fault>
+                              <input name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryDirectiveClassListReqMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequest" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="request" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequestType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryDirectiveClassListRespMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponse" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="response" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponseType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                           <operation name="QueryDirectiveReferenceTypeList">
+                              <soap soapAction="QueryDirectiveReferenceTypeList" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <fault name="fault" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryFault">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://schemas.xmlsoap.org/soap/envelope/" localPart="Fault" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="fault" required="false" xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <part name="faultcode" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="faultstring" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="detail" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type>
+                                                   <complexType elementQualified="true">
+                                                      <part name="part" required="true" elementQualified="false">
+                                                         <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                                      </part>
+                                                   </complexType>
+                                                </type>
+                                             </part>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </fault>
+                              <input name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryDirectiveReferenceTypeListReqMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequest" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="response" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequestType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryDirectiveReferenceTypeListRespMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponse" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="response" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponseType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                           <operation name="QueryOfficialJournalList">
+                              <soap soapAction="QueryOfficialJournalList" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <fault name="fault" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryFault">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://schemas.xmlsoap.org/soap/envelope/" localPart="Fault" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="fault" required="false" xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <part name="faultcode" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="faultstring" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="detail" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type>
+                                                   <complexType elementQualified="true">
+                                                      <part name="part" required="true" elementQualified="false">
+                                                         <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                                      </part>
+                                                   </complexType>
+                                                </type>
+                                             </part>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </fault>
+                              <input name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryOfficialJournalListReqMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequest" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="response" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequestType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryOfficialJournalListRespMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponse" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="response" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponseType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                           <operation name="QueryActReferenceTypeList">
+                              <soap soapAction="QueryActReferenceTypeList" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <fault name="fault" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryFault">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://schemas.xmlsoap.org/soap/envelope/" localPart="Fault" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="fault" required="false" xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <part name="faultcode" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="faultstring" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="detail" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type>
+                                                   <complexType elementQualified="true">
+                                                      <part name="part" required="true" elementQualified="false">
+                                                         <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                                      </part>
+                                                   </complexType>
+                                                </type>
+                                             </part>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </fault>
+                              <input name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryActReferenceTypeListReqMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequest" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="response" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequestType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryActReferenceTypeListRespMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponse" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="response" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponseType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                           <operation name="QueryActiveMemberStateList">
+                              <soap soapAction="QueryActiveMemberStateList" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <fault name="fault" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryFault">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://schemas.xmlsoap.org/soap/envelope/" localPart="Fault" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="fault" required="false" xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <part name="faultcode" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="faultstring" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="detail" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type>
+                                                   <complexType elementQualified="true">
+                                                      <part name="part" required="true" elementQualified="false">
+                                                         <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                                      </part>
+                                                   </complexType>
+                                                </type>
+                                             </part>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </fault>
+                              <input name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryActiveMemberStateListReqMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequest" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="request" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequestType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryActiveMemberStateListRespMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponse" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="response" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponseType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                           <operation name="QueryActTypeList">
+                              <soap soapAction="QueryActTypeList" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <fault name="fault" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryFault">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://schemas.xmlsoap.org/soap/envelope/" localPart="Fault" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="fault" required="false" xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <part name="faultcode" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="faultstring" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="detail" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type>
+                                                   <complexType elementQualified="true">
+                                                      <part name="part" required="true" elementQualified="false">
+                                                         <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                                      </part>
+                                                   </complexType>
+                                                </type>
+                                             </part>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </fault>
+                              <input name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryActTypeListReqMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequest" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="request" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequestType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryActTypeListRespMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponse" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="response" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponseType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                           <operation name="QueryDirectiveReferenceList">
+                              <soap soapAction="QueryDirectiveReferenceList" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <fault name="fault" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryFault">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://schemas.xmlsoap.org/soap/envelope/" localPart="Fault" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="fault" required="false" xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <part name="faultcode" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="faultstring" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="detail" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type>
+                                                   <complexType elementQualified="true">
+                                                      <part name="part" required="true" elementQualified="false">
+                                                         <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                                      </part>
+                                                   </complexType>
+                                                </type>
+                                             </part>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </fault>
+                              <input name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryDirectiveReferenceListReqMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequest" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="request" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequestType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryDirectiveReferenceListRespMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponse" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="response" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponseType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                           <operation name="QueryDirectorateList">
+                              <soap soapAction="QueryDirectorateList" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <fault name="fault" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryFault">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://schemas.xmlsoap.org/soap/envelope/" localPart="Fault" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="fault" required="false" xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <part name="faultcode" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="faultstring" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="detail" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type>
+                                                   <complexType elementQualified="true">
+                                                      <part name="part" required="true" elementQualified="false">
+                                                         <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                                      </part>
+                                                   </complexType>
+                                                </type>
+                                             </part>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </fault>
+                              <input name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryDirectorateListReqMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequest" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="request" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequestType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryDirectorateListRespMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponse" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="response" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponseType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                           <operation name="QueryDeadlineTypeList">
+                              <soap soapAction="QueryDeadlineTypeList" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <fault name="fault" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryFault">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://schemas.xmlsoap.org/soap/envelope/" localPart="Fault" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="fault" required="false" xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <part name="faultcode" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="faultstring" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="detail" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type>
+                                                   <complexType elementQualified="true">
+                                                      <part name="part" required="true" elementQualified="false">
+                                                         <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                                      </part>
+                                                   </complexType>
+                                                </type>
+                                             </part>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </fault>
+                              <input name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryDeadlineTypeListReqMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequest" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="request" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequestType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryDeadlineTypeListRespMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponse" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="response" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponseType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                           <operation name="QueryDirectiveSectionsList">
+                              <soap soapAction="QueryDirectiveSectionsList" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <fault name="fault" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryFault">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://schemas.xmlsoap.org/soap/envelope/" localPart="Fault" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="fault" required="false" xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <part name="faultcode" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="faultstring" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="detail" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type>
+                                                   <complexType elementQualified="true">
+                                                      <part name="part" required="true" elementQualified="false">
+                                                         <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                                      </part>
+                                                   </complexType>
+                                                </type>
+                                             </part>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </fault>
+                              <input name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryDirectiveSectionsListReqMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequest" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="request" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequestType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryDirectiveSectionsListRespMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponse" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="response" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponseType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                           <operation name="QueryMemberStateList">
+                              <soap soapAction="QueryMemberStateList" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <fault name="fault" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryFault">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://schemas.xmlsoap.org/soap/envelope/" localPart="Fault" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="fault" required="false" xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <part name="faultcode" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="faultstring" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                             </part>
+                                             <part name="detail" required="false" nillable="true" namespace="http://schemas.xmlsoap.org/soap/envelope/" elementQualified="false">
+                                                <type>
+                                                   <complexType elementQualified="true">
+                                                      <part name="part" required="true" elementQualified="false">
+                                                         <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                                                      </part>
+                                                   </complexType>
+                                                </type>
+                                             </part>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </fault>
+                              <input name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryMemberStateListReqMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequest" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="request" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="QueryRequestType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name="" message="{http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1}QueryMemberStateListRespMsg">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponse" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="response" required="true" xmlns="">
+                                       <type namespace="http://europa.eu/nif/ABCSImpl/Integration/ReferenceDataReqABCSImpl/V1" localPart="KeyValueQueryResponseType" prefix=""/>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                        </port>
+                     </service>
+                  </model>
+               </wsconnection>
+            </Contents>
+         </XmlRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="HR" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="HR" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="sid">
+            <Contents>XE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>192.168.1.102</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>hr</Contents>
+         </StringRefAddr>
+         <SecureRefAddr addrType="password"/>
+         <StringRefAddr addrType="DeployPassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+</References>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="EmployeesModule"
+  Version="11.1.1.56.60"
+  ComponentClass="gr.dim.stas.model.appModule.EmployeesModuleImpl"
+  ComponentInterface="gr.dim.stas.model.appModule.common.EmployeesModule"
+  ClientProxyName="gr.dim.stas.model.appModule.client.EmployeesModuleClient"
+  ClearCacheOnRollback="true">
+  <DesignTime>
+    <Attr Name="_deployType" Value="0"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewUsage
+    Name="EmployeesView1"
+    ViewObjectName="gr.dim.stas.model.views.EmployeesView"/>
+  <ClientInterface>
+    <Method
+      Name="createEmployeesRow">
+      <Return
+        Type="void"/>
+      <Parameter
+        Name="discriminatorValue"
+        Type="java.lang.String"/>
+    </Method>
+  </ClientInterface>
+</AppModule>

@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx"
+                         id="pt1">
+          <f:facet name="center">
+            <af:panelFormLayout id="pfl1">
+              <af:inputText value="#{bindings.CountryId.inputValue}"
+                            label="#{bindings.CountryId.hints.label}"
+                            required="#{bindings.CountryId.hints.mandatory}"
+                            columns="#{bindings.CountryId.hints.displayWidth}"
+                            maximumLength="#{bindings.CountryId.hints.precision}"
+                            shortDesc="#{bindings.CountryId.hints.tooltip}"
+                            id="it1">
+                <f:validator binding="#{bindings.CountryId.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.CountryName.inputValue}"
+                            label="#{bindings.CountryName.hints.label}"
+                            required="#{bindings.CountryName.hints.mandatory}"
+                            columns="#{bindings.CountryName.hints.displayWidth}"
+                            maximumLength="#{bindings.CountryName.hints.precision}"
+                            shortDesc="#{bindings.CountryName.hints.tooltip}"
+                            id="it3">
+                <f:validator binding="#{bindings.CountryName.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.RegionId.inputValue}"
+                            label="#{bindings.RegionId.hints.label}"
+                            required="#{bindings.RegionId.hints.mandatory}"
+                            columns="#{bindings.RegionId.hints.displayWidth}"
+                            maximumLength="#{bindings.RegionId.hints.precision}"
+                            shortDesc="#{bindings.RegionId.hints.tooltip}"
+                            id="it2">
+                <f:validator binding="#{bindings.RegionId.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.RegionId.format}"/>
+              </af:inputText>
+              <f:facet name="footer">
+                <af:group id="g1">
+                  <af:commandButton actionListener="#{bindings.Commit.execute}"
+                                    text="Commit"
+                                    
+                                    id="cb1"/>
+                  <af:commandButton text="Back to Search Results" id="cb2"
+                                    action="back"/>
+                </af:group>
+              </f:facet>
+            </af:panelFormLayout>
+          </f:facet>
+          <f:facet name="header"/>
+          <f:facet name="end"/>
+          <f:facet name="start"/>
+          <f:facet name="branding"/>
+          <f:facet name="copyright"/>
+          <f:facet name="status"/>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

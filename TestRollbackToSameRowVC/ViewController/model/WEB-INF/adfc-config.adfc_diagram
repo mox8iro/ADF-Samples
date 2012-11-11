@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">TestRollback</property>
+      <property
+         name="page">/TestRollback.jspx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>TestRollback&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="rawDescription">view - TestRollback</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">95.29883</property>
+      <property
+         name="x">323.0</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">TestQuery</property>
+      <property
+         name="page">/TestQuery.jspx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>TestQuery&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">300.29883</property>
+      <property
+         name="x">246.0</property>
+   </View>
+   <View
+      id="View4">
+      <property
+         name="activityId">TestEdit</property>
+      <property
+         name="page">/TestEdit.jspx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>TestEdit&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">300.24707</property>
+      <property
+         name="x">415.0</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="View3"
+      to="View4">
+      <property
+         name="fromOutcome">edit</property>
+      <property
+         name="sdm:polyPoints">R46,287.0,296.44824,373.99792,296.39648,L46</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="View4"
+      to="View3">
+      <property
+         name="fromOutcome">query</property>
+      <property
+         name="sdm:polyPoints">L54,374.0,303.39648,287.00208,303.44824,R54</property>
+   </ControlFlowCase>
+</SDM>

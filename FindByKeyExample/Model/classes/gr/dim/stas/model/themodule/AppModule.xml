@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1253" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="11.1.1.59.23"
+  ClearCacheOnRollback="true"
+  ComponentClass="gr.dim.stas.model.themodule.AppModuleImpl"
+  ComponentInterface="gr.dim.stas.model.themodule.common.AppModule"
+  ClientProxyName="gr.dim.stas.model.themodule.client.AppModuleClient">
+  <DesignTime>
+    <Attr Name="_deployType" Value="0"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewUsage
+    Name="EmpDetailsViewView1"
+    ViewObjectName="gr.dim.stas.model.views.EmpDetailsViewView"/>
+  <ViewUsage
+    Name="EmployeesView1"
+    ViewObjectName="gr.dim.stas.model.views.EmployeesView"/>
+  <ViewUsage
+    Name="EmployeesView2"
+    ViewObjectName="gr.dim.stas.model.views.EmployeesView"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1"
+    ViewLinkObjectName="gr.dim.stas.model.views.EmpManagerFkLink"
+    SrcViewUsageName="gr.dim.stas.model.themodule.AppModule.EmployeesView1"
+    DstViewUsageName="gr.dim.stas.model.themodule.AppModule.EmployeesView2"
+    Reversed="false"/>
+  <ClientInterface>
+    <Method
+      Name="findByKeyOnEmployees">
+      <Return
+        Type="void"/>
+    </Method>
+    <Method
+      Name="findByKeyOnEmployeeDetails">
+      <Return
+        Type="void"/>
+    </Method>
+  </ClientInterface>
+</AppModule>

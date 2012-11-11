@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="DeptMgrFkLink"
+  Version="11.1.1.59.23"
+  EntityAssociation="gr.dim.stas.model.entities.assocs.DeptMgrFkAssoc">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewLinkDefEnd
+    Name="EmployeesView1_1"
+    Cardinality="1"
+    Owner="gr.dim.stas.model.views.EmployeesView"
+    Source="true">
+    <DesignTime>
+      <Attr Name="_finderName" Value="EmployeesView1"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gr.dim.stas.model.views.EmployeesView.EmployeeId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="DepartmentsView"
+    Cardinality="-1"
+    Owner="gr.dim.stas.model.views.DepartmentsView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="DepartmentsView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gr.dim.stas.model.views.DepartmentsView.ManagerId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

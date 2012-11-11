@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx"
+                         id="pt1">
+          <f:facet name="center">
+            <af:panelGroupLayout layout="vertical" id="pgl1">
+              <af:panelHeader text="Departments" id="ph1">
+                <af:query id="qryId1" headerText="Search" disclosed="true"
+                          value="#{bindings.DepartmentsViewCriteriaQuery.queryDescriptor}"
+                          model="#{bindings.DepartmentsViewCriteriaQuery.queryModel}"
+                          queryListener="#{bindings.DepartmentsViewCriteriaQuery.processQuery}"
+                          queryOperationListener="#{bindings.DepartmentsViewCriteriaQuery.processQueryOperation}"
+                          resultComponentId="::resId1"/>
+              </af:panelHeader>
+              <af:commandButton text="Edit" id="cb2" action="edit"/>
+              <af:table value="#{bindings.DepartmentsView1.collectionModel}"
+                        var="row" rows="#{bindings.DepartmentsView1.rangeSize}"
+                        emptyText="#{bindings.DepartmentsView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        fetchSize="#{bindings.DepartmentsView1.rangeSize}"
+                        rowBandingInterval="0"
+                        selectedRowKeys="#{bindings.DepartmentsView1.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.DepartmentsView1.collectionModel.makeCurrent}"
+                        rowSelection="single" id="resId1">
+                <af:column sortProperty="DepartmentId" sortable="true"
+                           headerText="#{bindings.DepartmentsView1.hints.DepartmentId.label}"
+                           id="resId1c1">
+                  <af:outputText value="#{row.DepartmentId}" id="ot4">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.DepartmentsView1.hints.DepartmentId.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="DepartmentName" sortable="true"
+                           headerText="#{bindings.DepartmentsView1.hints.DepartmentName.label}"
+                           id="resId1c2">
+                  <af:outputText value="#{row.DepartmentName}" id="ot2"/>
+                </af:column>
+                <af:column sortProperty="ManagerId" sortable="true"
+                           headerText="#{bindings.DepartmentsView1.hints.ManagerId.label}"
+                           id="resId1c3">
+                  <af:outputText value="#{row.ManagerId}" id="ot1">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.DepartmentsView1.hints.ManagerId.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="LocationId" sortable="true"
+                           headerText="#{bindings.DepartmentsView1.hints.LocationId.label}"
+                           id="resId1c4">
+                  <af:outputText value="#{row.LocationId}" id="ot3">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.DepartmentsView1.hints.LocationId.format}"/>
+                  </af:outputText>
+                </af:column>
+              </af:table>
+            </af:panelGroupLayout>
+          </f:facet>
+          <f:facet name="header"/>
+          <f:facet name="end"/>
+          <f:facet name="start"/>
+          <f:facet name="branding"/>
+          <f:facet name="copyright"/>
+          <f:facet name="status"/>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

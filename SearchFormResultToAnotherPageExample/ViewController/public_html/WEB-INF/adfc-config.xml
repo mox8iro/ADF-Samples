@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="main">
+    <page>/main.jspx</page>
+  </view>
+  <task-flow-call id="search-task-flow-definition">
+    <task-flow-reference>
+      <document>/WEB-INF/search-task-flow-definition.xml</document>
+      <id>search-task-flow-definition</id>
+    </task-flow-reference>
+  </task-flow-call>
+  <view id="searchForm">
+    <page>/searchForm.jspx</page>
+  </view>
+  <task-flow-call id="searchResults-task-flow-definition">
+    <task-flow-reference>
+      <document>/WEB-INF/searchResults-task-flow-definition.xml</document>
+      <id>searchResults-task-flow-definition</id>
+    </task-flow-reference>
+  </task-flow-call>
+  <control-flow-rule id="__1">
+    <from-activity-id id="__2">main</from-activity-id>
+    <control-flow-case id="__3">
+      <from-outcome id="__5">searchInOneTaskFlow</from-outcome>
+      <to-activity-id id="__4">search-task-flow-definition</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__6">
+      <from-outcome id="__8">resultsInDifferentTaskFlow</from-outcome>
+      <to-activity-id id="__7">searchForm</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__9">
+    <from-activity-id id="__10">searchForm</from-activity-id>
+    <control-flow-case id="__12">
+      <from-outcome id="__13">execute</from-outcome>
+      <to-activity-id id="__11">searchResults-task-flow-definition</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__14">
+    <from-activity-id id="__15">*</from-activity-id>
+    <control-flow-case id="__16">
+      <from-outcome id="__18">change</from-outcome>
+      <to-activity-id id="__17">main</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+</adfc-config>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="TestRollback">
+    <page>/TestRollback.jspx</page>
+  </view>
+  <view id="TestQuery">
+    <page>/TestQuery.jspx</page>
+  </view>
+  <view id="TestEdit">
+    <page>/TestEdit.jspx</page>
+  </view>
+  <control-flow-rule id="__1">
+    <from-activity-id id="__2">TestQuery</from-activity-id>
+    <control-flow-case id="__4">
+      <from-outcome id="__5">edit</from-outcome>
+      <to-activity-id id="__3">TestEdit</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__6">
+    <from-activity-id id="__7">TestEdit</from-activity-id>
+    <control-flow-case id="__8">
+      <from-outcome id="__10">query</from-outcome>
+      <to-activity-id id="__9">TestQuery</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <managed-bean id="__13">
+    <managed-bean-name id="__14">TestRollbackBean</managed-bean-name>
+    <managed-bean-class id="__11">TestRollbackBean</managed-bean-class>
+    <managed-bean-scope id="__12">request</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

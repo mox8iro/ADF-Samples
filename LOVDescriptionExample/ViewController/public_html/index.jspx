@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx"
+                         id="pt1">
+          <f:facet name="center">
+            <af:panelFormLayout id="pfl1">
+              <af:inputText value="#{bindings.LocationId.inputValue}"
+                            label="#{bindings.LocationId.hints.label}"
+                            required="#{bindings.LocationId.hints.mandatory}"
+                            columns="#{bindings.LocationId.hints.displayWidth}"
+                            maximumLength="#{bindings.LocationId.hints.precision}"
+                            shortDesc="#{bindings.LocationId.hints.tooltip}"
+                            id="it2">
+                <f:validator binding="#{bindings.LocationId.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.LocationId.format}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.StreetAddress.inputValue}"
+                            label="#{bindings.StreetAddress.hints.label}"
+                            required="#{bindings.StreetAddress.hints.mandatory}"
+                            columns="#{bindings.StreetAddress.hints.displayWidth}"
+                            maximumLength="#{bindings.StreetAddress.hints.precision}"
+                            shortDesc="#{bindings.StreetAddress.hints.tooltip}"
+                            id="it6">
+                <f:validator binding="#{bindings.StreetAddress.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.PostalCode.inputValue}"
+                            label="#{bindings.PostalCode.hints.label}"
+                            required="#{bindings.PostalCode.hints.mandatory}"
+                            columns="#{bindings.PostalCode.hints.displayWidth}"
+                            maximumLength="#{bindings.PostalCode.hints.precision}"
+                            shortDesc="#{bindings.PostalCode.hints.tooltip}"
+                            id="it5">
+                <f:validator binding="#{bindings.PostalCode.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.City.inputValue}"
+                            label="#{bindings.City.hints.label}"
+                            required="#{bindings.City.hints.mandatory}"
+                            columns="#{bindings.City.hints.displayWidth}"
+                            maximumLength="#{bindings.City.hints.precision}"
+                            shortDesc="#{bindings.City.hints.tooltip}" id="it1">
+                <f:validator binding="#{bindings.City.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.StateProvince.inputValue}"
+                            label="#{bindings.StateProvince.hints.label}"
+                            required="#{bindings.StateProvince.hints.mandatory}"
+                            columns="#{bindings.StateProvince.hints.displayWidth}"
+                            maximumLength="#{bindings.StateProvince.hints.precision}"
+                            shortDesc="#{bindings.StateProvince.hints.tooltip}"
+                            id="it4">
+                <f:validator binding="#{bindings.StateProvince.validator}"/>
+              </af:inputText>
+              <af:inputListOfValues id="countryIdId"
+                                    popupTitle="Search and Select: #{bindings.CountryId.hints.label}"
+                                    value="#{bindings.CountryId.inputValue}"
+                                    label="#{bindings.CountryId.hints.label}"
+                                    model="#{bindings.CountryId.listOfValuesModel}"
+                                    required="#{bindings.CountryId.hints.mandatory}"
+                                    columns="#{bindings.CountryId.hints.displayWidth}"
+                                    shortDesc="#{bindings.CountryId.hints.tooltip}"
+                                    autoSubmit="true">
+                <f:validator binding="#{bindings.CountryId.validator}"/>
+              </af:inputListOfValues>
+              <af:inputText value="#{bindings.CountryName.inputValue}"
+                            label="#{bindings.CountryName.hints.label}"
+                            required="#{bindings.CountryName.hints.mandatory}"
+                            columns="#{bindings.CountryName.hints.displayWidth}"
+                            maximumLength="#{bindings.CountryName.hints.precision}"
+                            shortDesc="#{bindings.CountryName.hints.tooltip}"
+                            id="it3" partialTriggers="countryIdId">
+                <f:validator binding="#{bindings.CountryName.validator}"/>
+              </af:inputText>
+              <af:panelGroupLayout id="pgl2" layout="horizontal">
+                <af:commandButton actionListener="#{bindings.CreateInsert.execute}"
+                                  text="CreateInsert"
+                                  disabled="#{!bindings.CreateInsert.enabled}"
+                                  id="cb3"/>
+                <af:commandButton actionListener="#{bindings.Commit.execute}"
+                                  text="Commit"
+                                  disabled="#{!bindings.Commit.enabled}"
+                                  id="cb1"/>
+                <af:commandButton actionListener="#{bindings.Rollback.execute}"
+                                  text="Rollback"
+                                  disabled="#{!bindings.Rollback.enabled}"
+                                  immediate="true" id="cb2">
+                  <af:resetActionListener/>
+                </af:commandButton>
+              </af:panelGroupLayout>
+              <af:panelGroupLayout id="pgl1">
+                <af:commandButton actionListener="#{bindings.First.execute}"
+                                  text="First"
+                                  disabled="#{!bindings.First.enabled}"
+                                  partialSubmit="true" id="cb4"/>
+                <af:commandButton actionListener="#{bindings.Next.execute}"
+                                  text="Next"
+                                  disabled="#{!bindings.Next.enabled}"
+                                  partialSubmit="true" id="cb5"/>
+                <af:commandButton actionListener="#{bindings.Previous.execute}"
+                                  text="Previous"
+                                  disabled="#{!bindings.Previous.enabled}"
+                                  partialSubmit="true" id="cb6"/>
+                <af:commandButton actionListener="#{bindings.Last.execute}"
+                                  text="Last"
+                                  disabled="#{!bindings.Last.enabled}"
+                                  partialSubmit="true" id="cb7"/>
+              </af:panelGroupLayout>
+            </af:panelFormLayout>
+          </f:facet>
+          <f:facet name="header"/>
+          <f:facet name="end"/>
+          <f:facet name="start"/>
+          <f:facet name="branding"/>
+          <f:facet name="copyright"/>
+          <f:facet name="status"/>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:panelGroupLayout id="pgl1" layout="vertical">
+    <af:resource type="javascript">
+    
+    
+    // method that prevents user input and hides the inputText
+    
+      function enforcePreventUserInput(evt) {
+          //find the input component 
+          
+          var input= evt.getSource().findComponent('it1');
+          
+          input.setVisible(false);
+          
+          invokeServerAction('it1', evt, 'true');
+          
+          evt.preventUserInput();
+      }
+      
+      // method that calls a server Action 
+      function invokeServerAction(compId, evt, isVisible) {
+      
+          var textField = evt.getSource().findComponent(compId);
+          
+          AdfCustomEvent.queue(textField, "hideWhileWorkingPlease", 
+          {
+              visible : isVisible
+          },
+          false);
+      }
+    </af:resource>
+    <af:statusIndicator id="si6" partialTriggers="iter:sor1"
+                        binding="#{IndexBean.statusIndicatorComponent}"/>
+    <af:iterator id="iter" rows="3" var="rowd" value="#{IndexBean.iterList}">
+      <af:selectOneRadio label="Did you Had BreakFast 2 days ago?" id="sor1"
+                         autoSubmit="true" value="#{IndexBean.radioValue}"
+                         valueChangeListener="#{IndexBean.radioGroupVCL}">
+        <af:selectItem label="Yes" value="Y" id="si4"/>
+        <af:selectItem label="No" value="N" id="si5"/>
+        <af:selectItem label="Maybe" value="M" id="si2"/>
+        <af:selectItem label="What is For Dinner?" value="W" id="si1"/>
+        <af:selectItem label="Metallica on 28 May in Brussels" value="B"
+                       id="si3"/>
+        <af:clientListener method="enforcePreventUserInput" type="valueChange"/>
+      </af:selectOneRadio>
+      <af:inputText label="Why is that?" id="it1"
+                    value="#{IndexBean.inputTextValue}" partialTriggers="sor1"
+                    binding="#{IndexBean.theInputComponent}"
+                    clientComponent="true">
+        <af:serverListener type="hideWhileWorkingPlease"
+                           method="#{IndexBean.hideWhileWorkingPlease}"/>
+      </af:inputText>
+    </af:iterator>
+  </af:panelGroupLayout>
+</jsp:root>

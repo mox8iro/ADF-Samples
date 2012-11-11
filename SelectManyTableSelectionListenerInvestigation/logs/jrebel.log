@@ -1,0 +1,303 @@
+-------- HEADER --------
+VERSION 2
+JVM_ID 00f00e492e9f4513a164dd7ade5e56f3
+JVM_STARTED 1347386870472
+LOG_STARTED 1347386870777
+-------- EOF HEADER --------
+[2012-09-11 20:07:50.778] Rebel properties loaded from /Users/Mitsos/.jrebel/jrebel.properties:
+rebel.env.ide=eclipse
+rebel.env.ide_server_start=true
+rebel.env.java_version=java15
+rebel.env.maven=false
+rebel.env.operating_system=unix
+rebel.env.server=weblogic
+rebel.properties.version=2
+rebel.stats.time=15
+
+[2012-09-11 20:07:50.785] Redefinition can change method order: true
+[2012-09-11 20:07:50.785] Redefinition can change constant fields: true
+[2012-09-11 20:07:51.353] Added exclude filter for 'sun.misc.Launcher$ExtClassLoader'
+[2012-09-11 20:07:51.353] Added include managed filter com.zeroturnaround.javarebel.qk@3529c445
+[2012-09-11 20:07:51.353] Added exclude managed filter com.zeroturnaround.javarebel.ql@6b7599cc
+[2012-09-11 20:07:51.353] Added exclude managed filter com.zeroturnaround.javarebel.qm@5c0ad483
+[2012-09-11 20:07:51.385] System class loader hierarchy:
+[2012-09-11 20:07:51.386] sun.misc.Launcher$AppClassLoader@37b90b39 URLs: [file:/Users/Mitsos/Oracle/Middleware/home16/patch_wls1035/profiles/default/sys_manifest_classpath/weblogic_patch.jar, file:/Users/Mitsos/Oracle/Middleware/home16/patch_jdev1111/profiles/default/sys_manifest_classpath/weblogic_patch.jar, file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/tools.jar, file:/Users/Mitsos/Oracle/Middleware/home16/utils/config/10.3/config-launch.jar, file:/Users/Mitsos/Oracle/Middleware/home16/wlserver_10.3/server/lib/weblogic_sp.jar, file:/Users/Mitsos/Oracle/Middleware/home16/wlserver_10.3/server/lib/weblogic.jar, file:/Users/Mitsos/Oracle/Middleware/home16/modules/features/weblogic.server.modules_10.3.5.0.jar, file:/Users/Mitsos/Oracle/Middleware/home16/wlserver_10.3/server/lib/webservices.jar, file:/Users/Mitsos/Oracle/Middleware/home16/modules/org.apache.ant_1.7.1/lib/ant-all.jar, file:/Users/Mitsos/Oracle/Middleware/home16/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar, file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar]
+[2012-09-11 20:07:51.386] sun.misc.Launcher$AppClassLoader@37b90b39 parent: sun.misc.Launcher$ExtClassLoader@558fe7c3
+[2012-09-11 20:07:51.386] sun.misc.Launcher$ExtClassLoader@558fe7c3 URLs: [file:/Library/Java/Extensions/libwibucmJNI.jnilib, file:/System/Library/Java/Extensions/AppleScriptEngine.jar, file:/System/Library/Java/Extensions/dns_sd.jar, file:/System/Library/Java/Extensions/j3daudio.jar, file:/System/Library/Java/Extensions/j3dcore.jar, file:/System/Library/Java/Extensions/j3dutils.jar, file:/System/Library/Java/Extensions/jai_codec.jar, file:/System/Library/Java/Extensions/jai_core.jar, file:/System/Library/Java/Extensions/libAppleScriptEngine.jnilib, file:/System/Library/Java/Extensions/libJ3D.jnilib, file:/System/Library/Java/Extensions/libJ3DAudio.jnilib, file:/System/Library/Java/Extensions/libJ3DUtils.jnilib, file:/System/Library/Java/Extensions/libmlib_jai.jnilib, file:/System/Library/Java/Extensions/libQTJNative.jnilib, file:/System/Library/Java/Extensions/mlibwrapper_jai.jar, file:/System/Library/Java/Extensions/MRJToolkit.jar, file:/System/Library/Java/Extensions/QTJava.zip, file:/System/Library/Java/Extensions/vecmath.jar, file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/apple_provider.jar, file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/dnsns.jar, file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/localedata.jar, file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunjce_provider.jar, file:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunpkcs11.jar]
+[2012-09-11 20:07:51.404] Verified plugin 'org.zeroturnaround.jrebel.adf.core.AdfCorePlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/adf-core-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.404] Found dependent plugin 'org.zeroturnaround.jrebel.adf.core.AdfCorePlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/adf-core-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.411] Verified plugin 'org.zeroturnaround.jrebel.adf.faces.AdfFacesPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/adf-faces-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.411] Found dependent plugin 'org.zeroturnaround.jrebel.adf.faces.AdfFacesPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/adf-faces-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.418] Verified plugin 'com.zeroturnaround.javarebel.aspectj.AspectJPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/aspectj-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.418] Found dependent plugin 'com.zeroturnaround.javarebel.aspectj.AspectJPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/aspectj-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.432] Verified plugin 'org.zeroturnaround.javarebel.integration.catalina.CatalinaPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/catalina-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.432] Found dependent plugin 'org.zeroturnaround.javarebel.integration.catalina.CatalinaPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/catalina-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.438] Verified plugin 'org.zeroturnaround.jrebel.integration.click.ClickPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/click-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.438] Found dependent plugin 'org.zeroturnaround.jrebel.integration.click.ClickPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/click-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.448] Verified plugin 'org.zeroturnaround.javarebel.integration.cxf.CXFPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/cxf-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.448] Found dependent plugin 'org.zeroturnaround.javarebel.integration.cxf.CXFPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/cxf-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.459] Verified plugin 'org.zeroturnaround.jrebel.integration.eclipselink.EclipseLinkPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/eclipselink-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.459] Found dependent plugin 'org.zeroturnaround.jrebel.integration.eclipselink.EclipseLinkPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/eclipselink-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.470] Verified plugin 'org.zeroturnaround.jrebel.facelets.FaceletsPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/facelets-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.470] Found dependent plugin 'org.zeroturnaround.jrebel.facelets.FaceletsPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/facelets-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.479] Verified plugin 'org.zeroturnaround.javarebel.integration.fileservlet.FileServletPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/fileservlet-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.479] Found dependent plugin 'org.zeroturnaround.javarebel.integration.fileservlet.FileServletPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/fileservlet-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.506] Verified plugin 'org.zeroturnaround.jrebel.glassfish.GlassFishPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/glassfish-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.506] Found dependent plugin 'org.zeroturnaround.jrebel.glassfish.GlassFishPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/glassfish-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.514] Verified plugin 'org.zeroturnaround.jrebel.groovy.GroovyPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/groovy-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.514] Found dependent plugin 'org.zeroturnaround.jrebel.groovy.GroovyPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/groovy-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.522] Verified plugin 'com.zeroturnaround.javarebel.guice.GuicePlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/guice-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.522] Found dependent plugin 'com.zeroturnaround.javarebel.guice.GuicePlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/guice-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.543] Verified plugin 'org.zeroturnaround.jrebel.integration.gwt.GwtPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/gwt-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.543] Found dependent plugin 'org.zeroturnaround.jrebel.integration.gwt.GwtPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/gwt-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.561] Verified plugin 'org.zeroturnaround.javarebel.integration.hibernate.HibernatePlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/hibernate-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.561] Found dependent plugin 'org.zeroturnaround.javarebel.integration.hibernate.HibernatePlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/hibernate-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.570] Verified plugin 'org.zeroturnaround.jrebel.hibernate.validator.HibernateValidatorPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/hibernate-validator-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.570] Found dependent plugin 'org.zeroturnaround.jrebel.hibernate.validator.HibernateValidatorPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/hibernate-validator-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.581] Verified plugin 'org.zeroturnaround.jrebel.ibatis.IbatisPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/ibatis-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.581] Found dependent plugin 'org.zeroturnaround.jrebel.ibatis.IbatisPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/ibatis-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.595] Verified plugin 'org.zeroturnaround.jrebel.jackson.JacksonPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jackson-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.595] Found dependent plugin 'org.zeroturnaround.jrebel.jackson.JacksonPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jackson-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.615] Verified plugin 'org.zeroturnaround.javarebel.integration.jasper.JasperPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jasper-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.615] Found dependent plugin 'org.zeroturnaround.javarebel.integration.jasper.JasperPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jasper-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.619] Verified plugin 'org.zeroturnaround.jrebel.jaxb.endorsed.JAXBEndorsedPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jaxb-endorsed-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.619] Found dependent plugin 'org.zeroturnaround.jrebel.jaxb.endorsed.JAXBEndorsedPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jaxb-endorsed-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.623] Verified plugin 'org.zeroturnaround.jrebel.jaxb.java6.JAXBJava6Plugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jaxb-java6-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.623] Found dependent plugin 'org.zeroturnaround.jrebel.jaxb.java6.JAXBJava6Plugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jaxb-java6-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.632] Verified plugin 'org.zeroturnaround.jrebel.jaxb.JAXBPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jaxb-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.632] Found dependent plugin 'org.zeroturnaround.jrebel.jaxb.JAXBPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jaxb-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.673] Verified plugin 'org.zeroturnaround.javarebel.jboss.JbossPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jboss-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.673] Found dependent plugin 'org.zeroturnaround.javarebel.jboss.JbossPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jboss-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.680] Verified plugin 'org.zeroturnaround.jrebel.jbossaop.JBossAOPPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jbossaop-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.680] Found dependent plugin 'org.zeroturnaround.jrebel.jbossaop.JBossAOPPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jbossaop-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.689] Verified plugin 'org.zeroturnaround.jrebel.jersey.JerseyPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jersey-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.689] Found dependent plugin 'org.zeroturnaround.jrebel.jersey.JerseyPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jersey-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.698] Verified plugin 'org.zeroturnaround.jrebel.remoting.RemotingPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jr-remoting-5.0.1.jar
+[2012-09-11 20:07:51.698] Found dependent plugin 'org.zeroturnaround.jrebel.remoting.RemotingPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jr-remoting-5.0.1.jar
+[2012-09-11 20:07:51.749] Verified plugin 'org.zeroturnaround.javarebel.integration.servlet.ServletIntegrationPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jr-servlet-integration-5.0.1.jar
+[2012-09-11 20:07:51.749] Found dependent plugin 'org.zeroturnaround.javarebel.integration.servlet.ServletIntegrationPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jr-servlet-integration-5.0.1.jar
+[2012-09-11 20:07:51.754] Verified plugin 'org.zeroturnaround.jrebel.jruby.JRubyPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jruby-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.755] Found dependent plugin 'org.zeroturnaround.jrebel.jruby.JRubyPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/jruby-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.768] Verified plugin 'org.zeroturnaround.jrebel.liferay.LiferayPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/liferay-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.769] Found dependent plugin 'org.zeroturnaround.jrebel.liferay.LiferayPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/liferay-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.775] Verified plugin 'org.zeroturnaround.jrebel.lift.LiftPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/lift-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.775] Found dependent plugin 'org.zeroturnaround.jrebel.lift.LiftPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/lift-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.781] Verified plugin 'org.zeroturnaround.javarebel.integration.log4j.Log4jPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/log4j-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.781] Found dependent plugin 'org.zeroturnaround.javarebel.integration.log4j.Log4jPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/log4j-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.788] Verified plugin 'org.zeroturnaround.jrebel.integration.logback.LogbackPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/logback-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.788] Found dependent plugin 'org.zeroturnaround.jrebel.integration.logback.LogbackPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/logback-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.795] Verified plugin 'org.zeroturnaround.javarebel.integration.metro.MetroPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/metro-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.795] Found dependent plugin 'org.zeroturnaround.javarebel.integration.metro.MetroPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/metro-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.817] Verified plugin 'org.zeroturnaround.jrebel.mojarra.MojarraPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/mojarra-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.817] Found dependent plugin 'org.zeroturnaround.jrebel.mojarra.MojarraPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/mojarra-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.827] Verified plugin 'org.zeroturnaround.jrebel.mybatis.MyBatisPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/mybatis-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.827] Found dependent plugin 'org.zeroturnaround.jrebel.mybatis.MyBatisPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/mybatis-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.838] Verified plugin 'org.zeroturnaround.jrebel.myfaces.MyFacesPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/myfaces-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.838] Found dependent plugin 'org.zeroturnaround.jrebel.myfaces.MyFacesPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/myfaces-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.855] Verified plugin 'org.zeroturnaround.jrebel.integration.openjpa.OpenJPAPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/openjpa-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.855] Found dependent plugin 'org.zeroturnaround.jrebel.integration.openjpa.OpenJPAPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/openjpa-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.863] Verified plugin 'org.zeroturnaround.jrebel.resteasy.ResteasyPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/resteasy-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.863] Found dependent plugin 'org.zeroturnaround.jrebel.resteasy.ResteasyPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/resteasy-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.869] Verified plugin 'org.zeroturnaround.jrebel.restlet.RestletPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/restlet-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.869] Found dependent plugin 'org.zeroturnaround.jrebel.restlet.RestletPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/restlet-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.875] Verified plugin 'org.zeroturnaround.jrebel.scalate.ScalatePlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/scalate-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.876] Found dependent plugin 'org.zeroturnaround.jrebel.scalate.ScalatePlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/scalate-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.891] Verified plugin 'org.zeroturnaround.jrebel.seam.SeamPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/seam-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.891] Found dependent plugin 'org.zeroturnaround.jrebel.seam.SeamPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/seam-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.896] Verified plugin 'org.zeroturnaround.javarebel.seamwicket.SeamWicketPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/seam-wicket-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.896] Found dependent plugin 'org.zeroturnaround.javarebel.seamwicket.SeamWicketPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/seam-wicket-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.901] Verified plugin 'org.zeroturnaround.jrebel.integration.seam3.Seam3Plugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/seam3-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.901] Found dependent plugin 'org.zeroturnaround.jrebel.integration.seam3.Seam3Plugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/seam3-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.908] Verified plugin 'org.zeroturnaround.jrebel.integration.springdata.SpringDataPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/spring-data-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.908] Found dependent plugin 'org.zeroturnaround.jrebel.integration.springdata.SpringDataPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/spring-data-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.953] Verified plugin 'org.zeroturnaround.javarebel.integration.spring.SpringPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/spring-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.953] Found dependent plugin 'org.zeroturnaround.javarebel.integration.spring.SpringPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/spring-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.965] Verified plugin 'org.zeroturnaround.javarebel.integration.spring.SpringMvcPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/spring-mvc-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.965] Found dependent plugin 'org.zeroturnaround.javarebel.integration.spring.SpringMvcPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/spring-mvc-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.972] Verified plugin 'org.zeroturnaround.jrebel.integration.springSecurity.SpringSecurityPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/spring-security-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.972] Found dependent plugin 'org.zeroturnaround.jrebel.integration.springSecurity.SpringSecurityPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/spring-security-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.977] Verified plugin 'org.zeroturnaround.javarebel.integration.springWebflow.SpringWebflowPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/spring-webflow-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.977] Found dependent plugin 'org.zeroturnaround.javarebel.integration.springWebflow.SpringWebflowPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/spring-webflow-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.983] Verified plugin 'org.zeroturnaround.jrebel.springws.SpringWSPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/springws-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.983] Found dependent plugin 'org.zeroturnaround.jrebel.springws.SpringWSPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/springws-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.994] Verified plugin 'org.zeroturnaround.jrebel.integration.stripes.StripesPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/stripes-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:51.994] Found dependent plugin 'org.zeroturnaround.jrebel.integration.stripes.StripesPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/stripes-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.002] Verified plugin 'org.zeroturnaround.javarebel.integration.struts.Struts1Plugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/struts1-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.002] Found dependent plugin 'org.zeroturnaround.javarebel.integration.struts.Struts1Plugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/struts1-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.014] Verified plugin 'org.zeroturnaround.javarebel.integration.struts2.Struts2Plugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/struts2-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.014] Found dependent plugin 'org.zeroturnaround.javarebel.integration.struts2.Struts2Plugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/struts2-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.019] Verified plugin 'org.zeroturnaround.javarebel.integration.tapestry4.Tapestry4Plugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/tapestry4-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.019] Found dependent plugin 'org.zeroturnaround.javarebel.integration.tapestry4.Tapestry4Plugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/tapestry4-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.026] Verified plugin 'org.zeroturnaround.jrebel.integration.tiles1.Tiles1Plugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/tiles1-struts-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.026] Found dependent plugin 'org.zeroturnaround.jrebel.integration.tiles1.Tiles1Plugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/tiles1-struts-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.033] Verified plugin 'org.zeroturnaround.jrebel.integration.tiles2.Tiles2Plugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/tiles2-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.033] Found dependent plugin 'org.zeroturnaround.jrebel.integration.tiles2.Tiles2Plugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/tiles2-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.044] Verified plugin 'org.zeroturnaround.jrebel.integration.toplink.TopLinkPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/toplink-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.044] Found dependent plugin 'org.zeroturnaround.jrebel.integration.toplink.TopLinkPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/toplink-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.051] Verified plugin 'org.zeroturnaround.jrebel.integration.toplink.spring.TopLinkSpringPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/toplink-spring-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.051] Found dependent plugin 'org.zeroturnaround.jrebel.integration.toplink.spring.TopLinkSpringPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/toplink-spring-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.056] Verified plugin 'org.zeroturnaround.javarebel.velocity.VelocityPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/velocity-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.056] Found dependent plugin 'org.zeroturnaround.javarebel.velocity.VelocityPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/velocity-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.067] Verified plugin 'com.zeroturnaround.liverebel.weblogic.deploy.WeblogicDeployPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/weblogic-deploy-lr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.067] Found dependent plugin 'com.zeroturnaround.liverebel.weblogic.deploy.WeblogicDeployPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/weblogic-deploy-lr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.104] Verified plugin 'org.zeroturnaround.jrebel.weblogic.WeblogicPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/weblogic-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.104] Found dependent plugin 'org.zeroturnaround.jrebel.weblogic.WeblogicPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/weblogic-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.111] Verified plugin 'org.zeroturnaround.javarebel.webobjects.WebObjectsPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/webobjects-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.111] Found dependent plugin 'org.zeroturnaround.javarebel.webobjects.WebObjectsPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/webobjects-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.122] Verified plugin 'com.zeroturnaround.liverebel.websphere.deploy.WebsphereDeployPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/websphere-deploy-lr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.122] Found dependent plugin 'com.zeroturnaround.liverebel.websphere.deploy.WebsphereDeployPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/websphere-deploy-lr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.140] Verified plugin 'org.zeroturnaround.jrebel.websphere.WebspherePlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/websphere-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.140] Found dependent plugin 'org.zeroturnaround.jrebel.websphere.WebspherePlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/websphere-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.171] Verified plugin 'org.zeroturnaround.jrebel.weld.WeldPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/weld-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.172] Found dependent plugin 'org.zeroturnaround.jrebel.weld.WeldPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/weld-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.179] Verified plugin 'org.zeroturnaround.jrebel.wicket.WicketPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/wicket-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.179] Found dependent plugin 'org.zeroturnaround.jrebel.wicket.WicketPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/wicket-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.187] Verified plugin 'org.zeroturnaround.jrebel.wink.WinkPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/wink-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.187] Found dependent plugin 'org.zeroturnaround.jrebel.wink.WinkPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/wink-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.192] Verified plugin 'org.zeroturnaround.jrebel.zk.ZKPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/zk-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.192] Found dependent plugin 'org.zeroturnaround.jrebel.zk.ZKPlugin' from jar:file:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar!/plugins/zk-jr-plugin-5.0.1.jar
+[2012-09-11 20:07:52.195] Found a license file: /Users/Mitsos/.jrebel/jrebel.lic
+[2012-09-11 20:07:52.210] License information: {uid=a223a07c-b4cd-4ac3-8e85-7f4ed5664bbe, GeneratedBy=AUTO, Product=JRebel, Seats=1, Type=evaluation, OrderId=, enterprise=true, Organization=Free Lancer, validUntil=Fri Aug 16 21:42:13 CEST 2013, version=1.1, Name=Dimitrios Stasinopoulos, validDays=14, GeneratedOn=Thu Aug 16 21:42:13 CEST 2012, Email=stasinopoulos.dimitrios@gmail.com, limitedFrom=Thu Aug 16 21:42:13 CEST 2012, override=false, validFrom=Thu Aug 16 21:42:13 CEST 2012, limitedUntil=Fri Aug 16 21:42:13 CEST 2013}
+[2012-09-11 20:07:52.217] Now: Tue Sep 11 20:07:52 CEST 2012 Thu Aug 16 21:47:24 CEST 2012 Thu Aug 30 21:47:24 CEST 2012
+[2012-09-11 20:07:52.218] 
+[2012-09-11 20:07:52.219] #############################################################
+[2012-09-11 20:07:52.219] 
+[2012-09-11 20:07:52.219]  JRebel 5.0.1 (201207181843)
+[2012-09-11 20:07:52.219]  (c) Copyright ZeroTurnaround OU, Estonia, Tartu.
+[2012-09-11 20:07:52.221] 
+[2012-09-11 20:07:52.221]  Over the last 7 days JRebel prevented 
+[2012-09-11 20:07:52.222]  at least 19 redeploys/restarts saving you about 0.1 hours.
+[2012-09-11 20:07:52.222] 
+[2012-09-11 20:07:52.222]  YOUR JREBEL EVALUATION LICENSE HAS EXPIRED!
+[2012-09-11 20:07:52.222] 
+[2012-09-11 20:07:52.222]  Visit www.jrebel.com for instructions on obtaining    
+[2012-09-11 20:07:52.222]  a full license. If you wish to continue your evaluation  
+[2012-09-11 20:07:52.222]  please e-mail to support@zeroturnaround.com.             
+[2012-09-11 20:07:52.223]                                                           
+[2012-09-11 20:07:52.223]  If you think you should not see this message contact     
+[2012-09-11 20:07:52.223]  support@zeroturnaround.com or check that you have your   
+[2012-09-11 20:07:52.223]  license file in the same directory as the JAR file.      
+[2012-09-11 20:07:52.224] 
+[2012-09-11 20:07:52.224]  The following plugins are disabled at the moment: 
+[2012-09-11 20:07:52.224]  * Apache MyFaces plugin (set -Drebel.myfaces_plugin=true to enable)
+[2012-09-11 20:07:52.224]  * Click plugin (set -Drebel.click_plugin=true to enable)
+[2012-09-11 20:07:52.225]  * JRuby Plugin (set -Drebel.jruby_plugin=true to enable)
+[2012-09-11 20:07:52.225]  * Jersey plugin (set -Drebel.jersey_plugin=true to enable)
+[2012-09-11 20:07:52.225]  * RESTlet plugin (set -Drebel.restlet_plugin=true to enable)
+[2012-09-11 20:07:52.225]  * Seam-Wicket plugin (set -Drebel.seam_wicket_plugin=true to enable)
+[2012-09-11 20:07:52.225]  * Spring Data Plugin (set -Drebel.spring_data_plugin=true to enable)
+[2012-09-11 20:07:52.226]  * WebObjects plugin (set -Drebel.webobjects_plugin=true to enable)
+[2012-09-11 20:07:52.226] 
+[2012-09-11 20:07:52.226] #############################################################
+[2012-09-11 20:07:52.226] 
+[2012-09-11 20:07:52.227] JRebel is running with the following internal licensing configuration:
+[2012-09-11 20:07:52.227]     License valid? false
+[2012-09-11 20:07:52.227]     License flags: [none]
+[2012-09-11 20:07:52.227]     License type: EVALUATION
+[2012-09-11 20:07:52.227]     License valid from: 2012-08-16 21:47
+[2012-09-11 20:07:52.227]     License valid until: 2012-08-30 21:47
+[2012-09-11 20:07:52.227]     Subscription token licensing? false
+[2012-09-11 20:07:52.230] System properties found:
+awt.nativeDoubleBuffering=true
+awt.toolkit=apple.awt.CToolkit
+com.zeroturnaround.bundled.org.apache.commons.logging.Log=com.zeroturnaround.bundled.org.apache.commons.logging.impl.SimpleLog
+com.zeroturnaround.bundled.org.apache.commons.logging.simplelog.defaultlog=off
+common.components.home=/Users/Mitsos/Oracle/Middleware/home16/oracle_common
+domain.home=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain
+file.encoding=MacRoman
+file.encoding.pkg=sun.io
+file.separator=/
+ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16
+gopherProxySet=false
+http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16
+igf.arisidbeans.carmlloc=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain/config/fmwconfig/carml
+igf.arisidstack.home=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain/config/fmwconfig/arisidprovider
+java.awt.graphicsenv=apple.awt.CGraphicsEnvironment
+java.awt.printerjob=apple.awt.CPrinterJob
+java.class.path=/Users/Mitsos/Oracle/Middleware/home16/patch_wls1035/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/Users/Mitsos/Oracle/Middleware/home16/patch_jdev1111/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/tools.jar:/Users/Mitsos/Oracle/Middleware/home16/utils/config/10.3/config-launch.jar:/Users/Mitsos/Oracle/Middleware/home16/wlserver_10.3/server/lib/weblogic_sp.jar:/Users/Mitsos/Oracle/Middleware/home16/wlserver_10.3/server/lib/weblogic.jar:/Users/Mitsos/Oracle/Middleware/home16/modules/features/weblogic.server.modules_10.3.5.0.jar:/Users/Mitsos/Oracle/Middleware/home16/wlserver_10.3/server/lib/webservices.jar:/Users/Mitsos/Oracle/Middleware/home16/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/Users/Mitsos/Oracle/Middleware/home16/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar
+java.class.version=50.0
+java.endorsed.dirs=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed
+java.ext.dirs=/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext
+java.home=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+java.io.tmpdir=/var/folders/cw/6kk2d9v14gjb32z6lr71pwr00000gn/T/
+java.library.path=/Users/Mitsos/Oracle/Middleware/home16/patch_wls1035/profiles/default/native:/Users/Mitsos/Oracle/Middleware/home16/patch_jdev1111/profiles/default/native:/Users/Mitsos/Oracle/Middleware/home16/wlserver_10.3/server/native/macosx:.:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.protocol.handler.pkgs=oracle.mds.net.protocol
+java.runtime.name=Java(TM) SE Runtime Environment
+java.runtime.version=1.6.0_35-b10-428-11M3811
+java.specification.name=Java Platform API Specification
+java.specification.vendor=Sun Microsystems Inc.
+java.specification.version=1.6
+java.vendor=Apple Inc.
+java.vendor.url=http://www.apple.com/
+java.vendor.url.bug=http://bugreport.apple.com/
+java.version=1.6.0_35
+java.vm.info=mixed mode
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.specification.vendor=Sun Microsystems Inc.
+java.vm.specification.version=1.0
+java.vm.vendor=Apple Inc.
+java.vm.version=20.10-b01-428
+javax.net.ssl.trustStore=/Users/Mitsos/Oracle/Middleware/home16/wlserver_10.3/server/lib/DemoTrust.jks
+jps.app.credential.overwrite.allowed=true
+jrf.version=11.1.1
+jrockit.optfile=/Users/Mitsos/Oracle/Middleware/home16/oracle_common/modules/oracle.jrf_11.1.1/jrocket_optfile.txt
+line.separator=
+
+mrj.build=11M3811
+mrj.version=1070.1.6.0_35-428
+oracle.deployed.app.dir=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain/servers/DefaultServer/tmp/_WL_user
+oracle.deployed.app.ext=/-
+oracle.domain.config.dir=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain/config/fmwconfig
+oracle.security.jps.config=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain/config/fmwconfig/jps-config.xml
+oracle.server.config.dir=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain/config/fmwconfig/servers/DefaultServer
+org.apache.commons.logging.Log=org.apache.commons.logging.impl.Jdk14Logger
+os.arch=x86_64
+os.name=Mac OS X
+os.version=10.8.1
+path.separator=:
+platform.home=/Users/Mitsos/Oracle/Middleware/home16/wlserver_10.3
+rebel.adf_core_plugin=true
+rebel.adf_faces_plugin=true
+rebel.log=true
+rebel.log.file=/Users/Mitsos/jdeveloper/mywork/SelectManyTableSelectionListenerInvestigation/logs/jrebel.log
+socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16
+sun.arch.data.model=64
+sun.boot.class.path=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar
+sun.boot.library.path=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries
+sun.cpu.endian=little
+sun.cpu.isalist=
+sun.io.unicode.encoding=UnicodeLittle
+sun.java.command=weblogic.WLST shutdown.py
+sun.java.launcher=SUN_STANDARD
+sun.jnu.encoding=MacRoman
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+sun.os.patch.level=unknown
+user.country=US
+user.dir=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain
+user.home=/Users/Mitsos
+user.language=en
+user.name=Mitsos
+user.timezone=Europe/Brussels
+weblogic.alternateTypesDirectory=/Users/Mitsos/Oracle/Middleware/home16/oracle_common/modules/oracle.ossoiap_11.1.1,/Users/Mitsos/Oracle/Middleware/home16/oracle_common/modules/oracle.oamprovider_11.1.1
+weblogic.ext.dirs=/Users/Mitsos/Oracle/Middleware/home16/patch_wls1035/profiles/default/sysext_manifest_classpath:/Users/Mitsos/Oracle/Middleware/home16/patch_jdev1111/profiles/default/sysext_manifest_classpath
+weblogic.home=/Users/Mitsos/Oracle/Middleware/home16/wlserver_10.3/server
+weblogic.jdbc.remoteEnabled=false
+weblogic.management.discover=false
+weblogic.management.server=t3://127.0.0.1:7101
+weblogic.nodemanager.ServiceEnabled=true
+wls.home=/Users/Mitsos/Oracle/Middleware/home16/wlserver_10.3/server
+wlw.iterativeDev=
+wlw.logErrorsToConsole=
+wlw.testConsole=
+wsm.repository.path=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain/oracle/store/gmds
+
+[2012-09-11 20:07:52.235] VM arguments: -Xms256m -Xmx512m -XX:MaxPermSize=512m -Djavax.net.ssl.trustStore=/Users/Mitsos/Oracle/Middleware/home16/wlserver_10.3/server/lib/DemoTrust.jks -Xverify:none -javaagent:/Users/Mitsos/jdeveloper/jrebel/jrebel.jar -Drebel.log=true -Drebel.adf_core_plugin=true -Drebel.adf_faces_plugin=true -Drebel.log.file=/Users/Mitsos/jdeveloper/mywork/SelectManyTableSelectionListenerInvestigation/logs/jrebel.log -Dweblogic.nodemanager.ServiceEnabled=true -da -Dplatform.home=/Users/Mitsos/Oracle/Middleware/home16/wlserver_10.3 -Dwls.home=/Users/Mitsos/Oracle/Middleware/home16/wlserver_10.3/server -Dweblogic.home=/Users/Mitsos/Oracle/Middleware/home16/wlserver_10.3/server -Djps.app.credential.overwrite.allowed=true -Dcommon.components.home=/Users/Mitsos/Oracle/Middleware/home16/oracle_common -Djrf.version=11.1.1 -Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Jdk14Logger -Ddomain.home=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain -Djrockit.optfile=/Users/Mitsos/Oracle/Middleware/home16/oracle_common/modules/oracle.jrf_11.1.1/jrocket_optfile.txt -Doracle.server.config.dir=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain/config/fmwconfig/servers/DefaultServer -Doracle.domain.config.dir=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain/config/fmwconfig -Digf.arisidbeans.carmlloc=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain/config/fmwconfig/carml -Digf.arisidstack.home=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain/config/fmwconfig/arisidprovider -Doracle.security.jps.config=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain/config/fmwconfig/jps-config.xml -Doracle.deployed.app.dir=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain/servers/DefaultServer/tmp/_WL_user -Doracle.deployed.app.ext=/- -Dweblogic.alternateTypesDirectory=/Users/Mitsos/Oracle/Middleware/home16/oracle_common/modules/oracle.ossoiap_11.1.1,/Users/Mitsos/Oracle/Middleware/home16/oracle_common/modules/oracle.oamprovider_11.1.1 -Djava.protocol.handler.pkgs=oracle.mds.net.protocol -Dweblogic.jdbc.remoteEnabled=false -Dwsm.repository.path=/Users/Mitsos/.jdeveloper/system11.1.1.6.38.61.92/DefaultDomain/oracle/store/gmds -Dweblogic.management.discover=false -Dweblogic.management.server=t3://127.0.0.1:7101 -Dwlw.iterativeDev= -Dwlw.testConsole= -Dwlw.logErrorsToConsole= -Dweblogic.ext.dirs=/Users/Mitsos/Oracle/Middleware/home16/patch_wls1035/profiles/default/sysext_manifest_classpath:/Users/Mitsos/Oracle/Middleware/home16/patch_jdev1111/profiles/default/sysext_manifest_classpath
+[2012-09-11 20:07:52.243] Main JAR: /Users/Mitsos/Oracle/Middleware/home16/wlserver_10.3/server/lib/weblogic.jar
+[2012-09-11 20:07:52.243] Main class: weblogic.WLST
+[2012-09-11 20:07:52.243] Arguments: [shutdown.py]
+[2012-09-11 20:07:52.493] JRebel-Update: Server response: '5.0.1'.
+[2012-09-11 20:07:52.493] JRebel-Update: Deleted jrebel-msg
+[2012-09-11 20:07:54.554] Class 'weblogic/rmi/internal/StubGenerator' processed by 'com.zeroturnaround.javarebel.va@null'.
+[2012-09-11 20:08:03.039] JVM shutdown, disabling class reloading
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       [2012-09-11 20:08:02.323] JVM shutdown, disabling class reloading

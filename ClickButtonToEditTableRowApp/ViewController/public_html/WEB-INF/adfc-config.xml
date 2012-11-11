@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="x-MacGreek" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="main">
+    <page>/main.jspx</page>
+  </view>
+  <view id="editPage">
+    <page>/editPage.jspx</page>
+  </view>
+  <control-flow-rule id="__1">
+    <from-activity-id id="__2">main</from-activity-id>
+    <control-flow-case id="__3">
+      <from-outcome id="__5">dialog:editEmp</from-outcome>
+      <to-activity-id id="__4">editPage</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+</adfc-config>

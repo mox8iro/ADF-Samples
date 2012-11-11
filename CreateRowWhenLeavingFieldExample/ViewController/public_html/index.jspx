@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="index.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx" id="pt1">
+                    <f:facet name="center">
+                        <af:panelCollection id="pc1">
+                            <f:facet name="menus"/>
+                            <f:facet name="toolbar"/>
+                            <f:facet name="statusbar"/>
+                            <af:table value="#{bindings.RegionsView1.collectionModel}" var="row"
+                                      rows="#{bindings.RegionsView1.rangeSize}"
+                                      emptyText="#{bindings.RegionsView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                      fetchSize="#{bindings.RegionsView1.rangeSize}" rowBandingInterval="0"
+                                      selectedRowKeys="#{bindings.RegionsView1.collectionModel.selectedRow}"
+                                      selectionListener="#{bindings.RegionsView1.collectionModel.makeCurrent}"
+                                      rowSelection="single" id="t1" binding="#{TheBackingBean.theTable}">
+                                <af:column sortProperty="#{bindings.RegionsView1.hints.RegionId.name}" sortable="false"
+                                           headerText="#{bindings.RegionsView1.hints.RegionId.label}" id="c1">
+                                    <af:inputText value="#{row.bindings.RegionId.inputValue}"
+                                                  label="#{bindings.RegionsView1.hints.RegionId.label}"
+                                                  required="#{bindings.RegionsView1.hints.RegionId.mandatory}"
+                                                  columns="#{bindings.RegionsView1.hints.RegionId.displayWidth}"
+                                                  maximumLength="#{bindings.RegionsView1.hints.RegionId.precision}"
+                                                  shortDesc="#{bindings.RegionsView1.hints.RegionId.tooltip}" id="it1">
+                                        <f:validator binding="#{row.bindings.RegionId.validator}"/>
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.RegionsView1.hints.RegionId.format}"/>
+                                    </af:inputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.RegionsView1.hints.RegionName.name}"
+                                           sortable="false" headerText="#{bindings.RegionsView1.hints.RegionName.label}"
+                                           id="c2">
+                                    <af:inputText value="#{row.bindings.RegionName.inputValue}"
+                                                  label="#{bindings.RegionsView1.hints.RegionName.label}"
+                                                  required="#{bindings.RegionsView1.hints.RegionName.mandatory}"
+                                                  columns="#{bindings.RegionsView1.hints.RegionName.displayWidth}"
+                                                  maximumLength="#{bindings.RegionsView1.hints.RegionName.precision}"
+                                                  shortDesc="#{bindings.RegionsView1.hints.RegionName.tooltip}"
+                                                  id="it2" autoSubmit="true"
+                                                  valueChangeListener="#{TheBackingBean.RegionNameValueChangeListener}">
+                                        <f:validator binding="#{row.bindings.RegionName.validator}"/>
+                                    </af:inputText>
+                                </af:column>
+                            </af:table>
+                        </af:panelCollection>
+                    </f:facet>
+                    <f:facet name="header"/>
+                    <f:facet name="end"/>
+                    <f:facet name="start"/>
+                    <f:facet name="branding"/>
+                    <f:facet name="copyright"/>
+                    <f:facet name="status"/>
+                </af:pageTemplate>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

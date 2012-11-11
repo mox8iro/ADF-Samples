@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="x-MacGreek" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Regions"
+  Version="11.1.2.60.17"
+  DBObjectType="TABLE"
+  DBObjectName="HR.REGIONS"
+  AliasName="Regions"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <Attribute
+    Name="RegionId"
+    IsNotNull="true"
+    ColumnName="REGION_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="HR.REGIONS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="RegionName"
+    Precision="25"
+    ColumnName="REGION_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="HR.REGIONS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Countries"
+    Association="gr.dim.stas.model.entities.CountrRegFkAssoc"
+    AssociationEnd="gr.dim.stas.model.entities.CountrRegFkAssoc.Countries"
+    AssociationOtherEnd="gr.dim.stas.model.entities.CountrRegFkAssoc.Regions"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="RegIdPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="REG_ID_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="gr.dim.stas.model.entities.Regions.RegionId"/>
+    </AttrArray>
+  </Key>
+</Entity>

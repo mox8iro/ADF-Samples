@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.59.23" id="DataBindings" SeparateXMLFiles="false"
+             Package="gr.dim.stas.view" ClientType="Generic">
+  <pageMap>
+    <page path="/emps.jspx" usageId="gr_dim_stas_view_empsPageDef"/>
+    <page path="/empDetails.jspx" usageId="gr_dim_stas_view_empDetailsPageDef"/>
+    <page path="/WEB-INF/task-flow-definition.xml#task-flow-definition@findByKeyOnEmployeeDetails"
+          usageId="gr_dim_stas_view_task_flow_definition_task_flow_definition_findByKeyOnEmployeeDetailsPageDef"/>
+    <page path="/WEB-INF/task-flow-definition.xml#task-flow-definition@findByKeyOnEmployees"
+          usageId="gr_dim_stas_view_task_flow_definition_task_flow_definition_findByKeyOnEmployeesPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="gr_dim_stas_view_empsPageDef"
+          path="gr.dim.stas.view.pageDefs.empsPageDef"/>
+    <page id="gr_dim_stas_view_empDetailsPageDef"
+          path="gr.dim.stas.view.pageDefs.empDetailsPageDef"/>
+    <page id="gr_dim_stas_view_task_flow_definition_task_flow_definition_findByKeyOnEmployeeDetailsPageDef"
+          path="gr.dim.stas.view.pageDefs.task_flow_definition_task_flow_definition_findByKeyOnEmployeeDetailsPageDef"/>
+    <page id="gr_dim_stas_view_task_flow_definition_task_flow_definition_findByKeyOnEmployeesPageDef"
+          path="gr.dim.stas.view.pageDefs.task_flow_definition_task_flow_definition_findByKeyOnEmployeesPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl"
+                     Package="gr.dim.stas.model.themodule"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

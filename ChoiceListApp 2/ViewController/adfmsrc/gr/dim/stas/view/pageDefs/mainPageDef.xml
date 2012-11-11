@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="mainPageDef"
+                Package="gr.dim.stas.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EmployeesView1" RangeSize="25"
+              DataControl="AppModuleDataControl" id="EmployeesView1Iterator"/>
+    <iterator id="DepartmentsView2Iterator" Binds="DepartmentsView2"
+              DataControl="AppModuleDataControl" RangeSize="25"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="EmployeesView1Iterator" id="EmployeesView1">
+      <nodeDefinition DefName="gr.dim.stas.model.views.EmployeesView"
+                      Name="EmployeesView10">
+        <AttrNames>
+          <Item Value="EmployeeId"/>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="DepartmentId"/>
+          <Item Value="Email"/>
+          <Item Value="PhoneNumber"/>
+          <Item Value="HireDate"/>
+          <Item Value="JobId"/>
+          <Item Value="Salary"/>
+          <Item Value="CommissionPct"/>
+          <Item Value="ManagerId"/>
+        </AttrNames>
+        <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent"/>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+  <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+    <event name="testEvent"
+           raiseCondition="#{bindings.EmployeesView1.collectionModel.DepartmentId.attributeValue}"
+           eventType="Currency Change Event"/>
+  </events>
+</pageDefinition>

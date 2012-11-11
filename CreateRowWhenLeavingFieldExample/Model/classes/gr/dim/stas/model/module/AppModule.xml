@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="x-MacGreek" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="11.1.2.60.17"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="RegionsView1"
+    ViewObjectName="gr.dim.stas.model.views.RegionsView"/>
+</AppModule>

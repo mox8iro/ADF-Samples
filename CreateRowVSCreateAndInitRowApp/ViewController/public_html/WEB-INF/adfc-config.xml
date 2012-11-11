@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="main">
+    <page>/main.jspx</page>
+  </view>
+  <view id="Dept">
+    <page>/Dept.jspx</page>
+  </view>
+  <method-call id="createRowDept">
+    <method>#{bindings.createRowSetAttributeDepartment.execute}</method>
+    <outcome id="__17">
+      <fixed-outcome>seeDepartment</fixed-outcome>
+    </outcome>
+  </method-call>
+  <method-call id="createAndInitRowDept">
+    <method>#{bindings.createAndInitRowDepartment.execute}</method>
+    <outcome id="__25">
+      <fixed-outcome>goDep</fixed-outcome>
+    </outcome>
+  </method-call>
+  <view id="EmpCreate">
+    <page>/EmpCreate.jspx</page>
+  </view>
+  <method-call id="createRowSetAttrEmp">
+    <method>#{bindings.createRowSetAttributeEmployees.execute}</method>
+    <outcome id="__66">
+      <fixed-outcome>okEmp</fixed-outcome>
+    </outcome>
+  </method-call>
+  <method-call id="createRowSetAttrValuesEmp">
+    <method>#{bindings.createRowSetAttributeValuesEmployees.execute}</method>
+    <outcome id="__65">
+      <fixed-outcome>ok</fixed-outcome>
+    </outcome>
+  </method-call>
+  <method-call id="createAndInitRowEmp">
+    <method>#{bindings.createAndInitRowEmployees.execute}</method>
+    <outcome id="__64">
+      <fixed-outcome>okCreated</fixed-outcome>
+    </outcome>
+  </method-call>
+  <method-call id="createRowSetAttributeValuesDept">
+    <method>#{bindings.createRowSetAttributeValuesDepartment.execute}</method>
+    <outcome id="__63">
+      <fixed-outcome>goDept</fixed-outcome>
+    </outcome>
+  </method-call>
+  <control-flow-rule id="__1">
+    <from-activity-id id="__2">main</from-activity-id>
+    <control-flow-case id="__4">
+      <from-outcome id="__5">createRow</from-outcome>
+      <to-activity-id id="__3">createRowDept</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__11">
+      <from-outcome id="__19">createAndInitRow</from-outcome>
+      <to-activity-id id="__18">createAndInitRowDept</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__27">
+      <from-outcome id="__28">createRowSetAttrValuesEmp</from-outcome>
+      <to-activity-id id="__26">createRowSetAttrValuesEmp</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__30">
+      <from-outcome id="__31">createAndInitRowEmp</from-outcome>
+      <to-activity-id id="__29">createAndInitRowEmp</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__33">
+      <from-outcome id="__34">createRowSetAttrEmp</from-outcome>
+      <to-activity-id id="__32">createRowSetAttrEmp</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__55">
+      <from-outcome id="__57">createRowSetAttributeValues</from-outcome>
+      <to-activity-id id="__56">createRowSetAttributeValuesDept</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__6">
+    <from-activity-id id="__7">createRowDept</from-activity-id>
+    <control-flow-case id="__8">
+      <from-outcome id="__10">seeDepartment</from-outcome>
+      <to-activity-id id="__9">Dept</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__12">
+    <from-activity-id id="__13">Dept</from-activity-id>
+    <control-flow-case id="__15">
+      <from-outcome id="__16">goBack</from-outcome>
+      <to-activity-id id="__14">main</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__20">
+    <from-activity-id id="__21">createAndInitRowDept</from-activity-id>
+    <control-flow-case id="__22">
+      <from-outcome id="__24">goDep</from-outcome>
+      <to-activity-id id="__23">Dept</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__35">
+    <from-activity-id id="__36">createAndInitRowEmp</from-activity-id>
+    <control-flow-case id="__38">
+      <from-outcome id="__47">okCreated</from-outcome>
+      <to-activity-id id="__37">EmpCreate</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__39">
+    <from-activity-id id="__40">createRowSetAttrValuesEmp</from-activity-id>
+    <control-flow-case id="__41">
+      <from-outcome id="__48">ok</from-outcome>
+      <to-activity-id id="__42">EmpCreate</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__43">
+    <from-activity-id id="__44">createRowSetAttrEmp</from-activity-id>
+    <control-flow-case id="__45">
+      <from-outcome id="__49">okEmp</from-outcome>
+      <to-activity-id id="__46">EmpCreate</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__50">
+    <from-activity-id id="__51">EmpCreate</from-activity-id>
+    <control-flow-case id="__52">
+      <from-outcome id="__54">goMain</from-outcome>
+      <to-activity-id id="__53">main</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__58">
+    <from-activity-id id="__59">createRowSetAttributeValuesDept</from-activity-id>
+    <control-flow-case id="__60">
+      <from-outcome id="__62">goDept</from-outcome>
+      <to-activity-id id="__61">Dept</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+</adfc-config>
